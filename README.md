@@ -2,27 +2,19 @@
       <img src="https://i.ibb.co/VCpbKjp/Nl-Pcf-EAG-Rq-N6-Ss-T-0-TNIt1-ZVezq-Ihs7n4-IEfbo9-JNOn-Gkhz-V-N8h9tb-H7-Tvp-Q0.jpg">
 </p>
 
-<p align="center">
-   <img src="" alt="Unity Version">
-   <img src="" alt="Game Version">
-   <img src="" alt="License">
-</p>
 
 ## About
 
-About Text Here
+Spectrum Security is a small project written entirely in Python. 
+It uses MD5 hashes to check for viruses. The database contains about 30 million MD5 hashes, and it is constantly updated, thanks to the Virus Share service. Subsequently, the project will be developed.
 
 ## Documentation
 
-Documentation Here
-
-## Distribute
-
-- [Service Name](Page Link)
+As soon as Spectrum Security 1.0 is released, a detailed description of its use will appear here.
 
 
 ## Developers
 
-- [Delevoper Name](GitHub Profile Link)
+- [DIMFLIX](https://github.com/DIMFLIX-OFFICIAL)
 
 ## License
