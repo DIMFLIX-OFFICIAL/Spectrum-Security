@@ -5,16 +5,19 @@
 
 ## About
 
-Spectrum Security is a small project written entirely in Python. 
-It uses MD5 hashes to check for viruses. The database contains about 30 million MD5 hashes, and it is constantly updated, thanks to the Virus Share service. Subsequently, the project will be developed.
+Spectrum Security is a small project written entirely in Python.
+To check a PC for viruses, it uses specially trained machine learning, which recognizes malicious code in Windows executable files with up to 90% accuracy.
 
-## Documentation
+Antivirus can work in three modes:
+• Full verification
+• Checking the folder
+• File verification
 
-As soon as Spectrum Security 1.0 is released, a detailed description of its use will appear here.
+In the future, the project will be updated, getting better and better.
+
 
 
 ## Developers
 
 - [DIMFLIX](https://github.com/DIMFLIX-OFFICIAL)
 
-## License
