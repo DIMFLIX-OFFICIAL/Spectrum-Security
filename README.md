@@ -8,10 +8,10 @@
 Spectrum Security is a small project written entirely in Python.
 To check a PC for viruses, it uses specially trained machine learning, which recognizes malicious code in Windows executable files with up to 90% accuracy.
 
-Antivirus can work in three modes:
-• Full verification
-• Checking the folder
-• File verification
+Antivirus can work in three modes:<br>
+• Full verification<br>
+• Checking the folder<br>
+• File verification<br>
 
 In the future, the project will be updated, getting better and better.
 
