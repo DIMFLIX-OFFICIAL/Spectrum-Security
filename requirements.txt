@@ -1,0 +1,11 @@
+psutil
+GPUtil
+easygui
+threading
+winreg
+pyside2
+pefile
+pickle
+joblib
+sqlite3
+datetime
