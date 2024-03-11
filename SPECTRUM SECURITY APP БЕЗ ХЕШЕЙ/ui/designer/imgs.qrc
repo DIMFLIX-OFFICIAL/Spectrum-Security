@@ -1,0 +1,22 @@
+<RCC>
+  <qresource prefix="bottom_menu">
+    <file>imgs/bottom_menu/faq_icon.png</file>
+    <file>imgs/bottom_menu/home_icon.png</file>
+    <file>imgs/bottom_menu/scanning_icon.png</file>
+    <file>imgs/bottom_menu/settings_icon.png</file>
+    <file>imgs/bottom_menu/virus_storage_icon.png</file>
+  </qresource>
+  <qresource prefix="general">
+    <file>imgs/general/checked.png</file>
+    <file>imgs/general/cil-file.png</file>
+    <file>imgs/general/cil-folder.png</file>
+    <file>imgs/general/close.png</file>
+    <file>imgs/general/copy.png</file>
+    <file>imgs/general/down_arrow.png</file>
+    <file>imgs/general/icon.png</file>
+    <file>imgs/general/minimize.png</file>
+    <file>imgs/general/SpectrumLogo.png</file>
+    <file>imgs/general/trash.png</file>
+    <file>imgs/general/up_arrow.png</file>
+  </qresource>
+</RCC>

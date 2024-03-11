@@ -1,0 +1,4239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>555</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>555</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>900</width>
+    <height>555</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QScrollBar:horizontal {
+    border: none;
+    background: rgb(52, 59, 72);
+    height: 5px;
+    margin: 0px 80px 0px 80px;
+	border-radius: 0px;
+}
+QScrollBar::handle:horizontal {
+    background:  rgb(255, 255, 255);
+    min-width: 25px;
+	border-radius: 2px
+}
+QScrollBar::add-line:horizontal {
+    border: none;
+    background: none;
+    width: 1px;
+}
+QScrollBar::sub-line:horizontal {
+    border: none;
+    background: none;
+    width: 1px;
+}
+QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal
+{
+     background: none;
+}
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+{
+     background: none;
+}
+
+
+
+
+
+
+
+
+
+
+QScrollBar:vertical {
+	border: none;
+    background: rgb(52, 59, 72);
+    width: 6px;
+    margin: 10px 0 10px 0;
+	border-radius: 0px;
+ }
+ QScrollBar::handle:vertical {	
+	background: rgb(255, 255, 255);
+    min-height: 25px;
+	border-radius: 3px
+ }
+
+ QScrollBar::add-line:vertical {
+     border: none;
+    background: none;
+     height: 1px;
+	border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+     subcontrol-position: bottom;
+     subcontrol-origin: margin;
+ }
+ QScrollBar::sub-line:vertical {
+	border: none;
+    background: none;
+     height: 1px;
+	border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+     subcontrol-position: top;
+     subcontrol-origin: margin;
+ }
+
+ QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+     background: none;
+ }
+
+ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+     background: none;
+ }</string>
+  </property>
+  <widget class="QWidget" name="BackGround">
+   <property name="styleSheet">
+    <string notr="true">background-color: #1F1F1F;
+border-radius: 15px;
+</string>
+   </property>
+   <widget class="QFrame" name="top_menu">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>900</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>900</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>50</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #2C2C2C;
+border-radius: 0px;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="top_menu_header">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLabel" name="top_menu_icon">
+          <property name="minimumSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="imgs.qrc">:/general/imgs/general/icon.png</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="top_menu_title">
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: #fff;</string>
+          </property>
+          <property name="text">
+           <string>SPECTRUM SECURITY</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="top_menu_btns">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="top_menu_minimize_btn">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {	
+	border: none;
+	border-radius: 0px;
+	background-color: none;
+}
+
+QPushButton:hover{
+	background-color: #3C3C3C;
+}
+
+QPushButton:pressed {	
+	background-color: #3C3C3C;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="imgs.qrc">
+            <normaloff>:/general/imgs/general/minimize.png</normaloff>:/general/imgs/general/minimize.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="top_menu_close_btn">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {	
+	border: none;
+	background-color: none;
+	border-radius: 0px;
+	border-top-right-radius: 15px;
+}
+
+QPushButton:hover{
+	background-color: #3C3C3C;
+}
+
+QPushButton:pressed {	
+	background-color: #3C3C3C;
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="imgs.qrc">
+            <normaloff>:/general/imgs/general/close.png</normaloff>:/general/imgs/general/close.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QStackedWidget" name="Pages">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>62</y>
+      <width>876</width>
+      <height>364</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>876</width>
+      <height>364</height>
+     </size>
+    </property>
+    <property name="currentIndex">
+     <number>3</number>
+    </property>
+    <widget class="QWidget" name="HomePage">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="home_main_menu">
+        <property name="styleSheet">
+         <string notr="true">background-color: #2C2C2C;
+border-radius: 15px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QFrame" name="home_white_left_line">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>12</y>
+           <width>6</width>
+           <height>340</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #FFF;
+border-radius: 3px;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QFrame" name="RAM_background_white">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>140</y>
+           <width>470</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>470</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>470</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #FFF;
+border-radius: 10px;
+border-top-right-radius: 17px;
+border-bottom-right-radius: 17px;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_20">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>6</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="RAM_background_grey">
+            <property name="minimumSize">
+             <size>
+              <width>465</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QFrame {
+	background-color: #383838;
+	border-radius: 10px;
+}
+QFrame:hover{
+	background-color: #3C3C3C;
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="RAM_progress">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>0</y>
+               <width>120</width>
+               <height>35</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>14</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #FFF;
+background: none;</string>
+             </property>
+             <property name="text">
+              <string>RAM - 0%</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="RAM_total_info">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>35</y>
+               <width>441</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #FFF;
+background: none;</string>
+             </property>
+             <property name="text">
+              <string>Total: 0GB</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="RAM_used_info">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>55</y>
+               <width>441</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #FFF;
+background: none;</string>
+             </property>
+             <property name="text">
+              <string>Used: 0GB</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QFrame" name="CPU_background_white">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>20</y>
+           <width>470</width>
+           <height>101</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>470</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>470</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #FFF;
+border-radius: 10px;
+border-top-right-radius: 17px;
+border-bottom-right-radius: 17px;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_19">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>6</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="CPU_background_grey">
+            <property name="minimumSize">
+             <size>
+              <width>465</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QFrame {
+	background-color: #383838;
+	border-radius: 10px;
+}
+QFrame:hover{
+	background-color: #3C3C3C;
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="CPU_progress">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>0</y>
+               <width>112</width>
+               <height>35</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>14</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #FFF;
+background: none;</string>
+             </property>
+             <property name="text">
+              <string>CPU - 0%</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="CPU_info">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>35</y>
+               <width>441</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #FFF;
+background: none;</string>
+             </property>
+             <property name="text">
+              <string>Model:</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="Physical_cores_info">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>55</y>
+               <width>441</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #FFF;
+background: none;</string>
+             </property>
+             <property name="text">
+              <string>Physical cores: 0</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="Frequency_info">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>75</y>
+               <width>441</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #FFF;
+background: none;</string>
+             </property>
+             <property name="text">
+              <string>Frequency: 0MHz</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QFrame" name="GPU_background_white">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>240</y>
+           <width>470</width>
+           <height>101</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>470</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>470</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #FFF;
+border-radius: 10px;
+border-top-right-radius: 17px;
+border-bottom-right-radius: 17px;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_21">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>6</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="GPU_background_grey">
+            <property name="minimumSize">
+             <size>
+              <width>465</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QFrame {
+	background-color: #383838;
+	border-radius: 10px;
+}
+QFrame:hover{
+	background-color: #3C3C3C;
+}
+</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="GPU_progress">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>0</y>
+               <width>114</width>
+               <height>35</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>14</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #FFF;
+background: none;</string>
+             </property>
+             <property name="text">
+              <string>GPU - 0%</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="GPU_model_info">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>35</y>
+               <width>441</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #FFF;
+background: none;</string>
+             </property>
+             <property name="text">
+              <string>Model: not found</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="GPU_vram_total_info">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>55</y>
+               <width>441</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #FFF;
+background: none;</string>
+             </property>
+             <property name="text">
+              <string>Total VRAM: 0.0MB</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="GPU_vram_used_info">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>75</y>
+               <width>441</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Segoe UI</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: #FFF;
+background: none;</string>
+             </property>
+             <property name="text">
+              <string>Used VRAM: 0.0MB</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QLabel" name="home_logo">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>0</y>
+           <width>361</width>
+           <height>361</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: transparent;
+background-position: center;
+background-repeat: no-repeat;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="imgs.qrc">:/general/imgs/general/SpectrumLogo.png</pixmap>
+         </property>
+        </widget>
+        <widget class="QFrame" name="home_secret_way">
+         <property name="geometry">
+          <rect>
+           <x>760</x>
+           <y>47</y>
+           <width>53</width>
+           <height>47</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: none;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="ScanningPage">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="scanning_main_menu">
+        <property name="styleSheet">
+         <string notr="true">background-color: #2C2C2C;
+border-radius: 15px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QFrame" name="scanning_white_left_line">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>12</y>
+           <width>6</width>
+           <height>340</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #FFF;
+border-radius: 3px;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QFrame" name="scanning_top_menu">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>20</y>
+           <width>395</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_19">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QRadioButton" name="scanning_choose_btn_full">
+            <property name="minimumSize">
+             <size>
+              <width>131</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>131</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QRadioButton {	
+	background-color: #383838;
+	border-radius: 0px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border: 1px solid #FFF;
+	color: #FFF;
+}
+
+QRadioButton:hover{
+	background-color: #3C3C3C;
+}
+
+QRadioButton::indicator {
+	width: 35px;
+	height: 1px;
+	background-color: #383838;
+}
+
+QRadioButton:checked {
+	border: 1px solid #BD93F9;	
+	color: #BD93F9;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>FULL</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="scanning_choose_btn_folder">
+            <property name="minimumSize">
+             <size>
+              <width>131</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>131</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QRadioButton {	
+	background-color: #383838;
+	border-radius: 0px;
+	border: 1px solid #FFF;
+	color: #FFF;
+}
+
+QRadioButton:hover{
+	background-color: #3C3C3C;
+}
+
+QRadioButton::indicator {
+	width: 22px;
+	height: 1px;
+	background-color: #383838;
+}
+
+QRadioButton:checked {
+	border: 1px solid #BD93F9;	
+	color: #BD93F9;
+}</string>
+            </property>
+            <property name="text">
+             <string>FOLDER</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="scanning_choose_btn_file">
+            <property name="minimumSize">
+             <size>
+              <width>131</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>131</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QRadioButton {	
+	background-color: #383838;
+	border-radius: 0px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	border: 1px solid #FFF;
+	color: #FFF;
+}
+
+QRadioButton:hover{
+	background-color: #3C3C3C;
+}
+
+QRadioButton::indicator {
+	width: 37px;
+	height: 1px;
+	background-color: #383838;
+}
+
+QRadioButton:checked {
+	border: 1px solid #BD93F9;	
+	color: #BD93F9;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>FILE</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>90</y>
+           <width>181</width>
+           <height>181</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="scanning_progress_bar_widget">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+         </layout>
+        </widget>
+        <widget class="QPushButton" name="scanning_start_btn">
+         <property name="geometry">
+          <rect>
+           <x>161</x>
+           <y>290</y>
+           <width>193</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>193</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>193</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>14</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	background-color: #383838;
+	border-radius: 10px;
+	color: #FFF;
+}
+
+QPushButton:hover{
+	background-color: #3C3C3C;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>SCAN</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="scanning_logo">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>0</y>
+           <width>341</width>
+           <height>361</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: transparent;
+background-position: center;
+background-repeat: no-repeat;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="imgs.qrc">:/general/imgs/general/SpectrumLogo.png</pixmap>
+         </property>
+        </widget>
+        <widget class="QFrame" name="scanning_secret_way">
+         <property name="geometry">
+          <rect>
+           <x>760</x>
+           <y>47</y>
+           <width>53</width>
+           <height>47</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: none;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="FaqPage">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="faq_main_menu">
+        <property name="styleSheet">
+         <string notr="true">background-color: #2C2C2C;
+border-radius: 15px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QScrollArea" name="faq_scroll_area">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>12</y>
+           <width>491</width>
+           <height>340</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">margin: 0px;</string>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+         <widget class="QWidget" name="faq_scroll_area_widget">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>485</width>
+            <height>340</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <property name="spacing">
+            <number>12</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item alignment="Qt::AlignTop">
+            <widget class="QFrame" name="faq_scroll_area_frame">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_18">
+              <property name="spacing">
+               <number>10</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="faq_small_description_white_background">
+                <property name="minimumSize">
+                 <size>
+                  <width>470</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>470</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: #FFF;
+border-radius: 10px;
+border-top-right-radius: 17px;
+border-bottom-right-radius: 17px;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_15">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="faq_small_description_grey_background">
+                   <property name="minimumSize">
+                    <size>
+                     <width>465</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QFrame {
+	background-color: #383838;
+	border-radius: 10px;
+	border-top-left-radius: 8px;
+}
+QFrame:hover{
+	background-color: #3C3C3C;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QLabel" name="faq_small_description_title">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>0</y>
+                      <width>401</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>Small description</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="faq_small_description_btn">
+                    <property name="geometry">
+                     <rect>
+                      <x>410</x>
+                      <y>0</y>
+                      <width>55</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>55</width>
+                      <height>31</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>55</width>
+                      <height>31</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="imgs.qrc">
+                      <normaloff>:/general/imgs/general/down_arrow.png</normaloff>:/general/imgs/general/down_arrow.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="faq_small_description_text">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>30</y>
+                      <width>421</width>
+                      <height>111</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spectrum Security is a start-up project that is rapidly gaining momentum.  We have a fairly large database of viruses, in the amount of 30 million, as well as our own artificial intelligence that can detect any malware.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="faq_home_page_white_background">
+                <property name="minimumSize">
+                 <size>
+                  <width>470</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>470</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: #FFF;
+border-radius: 10px;
+border-top-right-radius: 17px;
+border-bottom-right-radius: 17px;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_16">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="faq_home_page_grey_background">
+                   <property name="minimumSize">
+                    <size>
+                     <width>465</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QFrame {
+	background-color: #383838;
+	border-radius: 10px;
+	border-top-left-radius: 8px;
+}
+QFrame:hover{
+	background-color: #3C3C3C;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QLabel" name="faq_home_page_title">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>0</y>
+                      <width>401</width>
+                      <height>35</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>Home Page</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="faq_home_page_btn">
+                    <property name="geometry">
+                     <rect>
+                      <x>410</x>
+                      <y>0</y>
+                      <width>55</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>55</width>
+                      <height>31</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>55</width>
+                      <height>31</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="imgs.qrc">
+                      <normaloff>:/general/imgs/general/down_arrow.png</normaloff>:/general/imgs/general/down_arrow.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="faq_home_page_text">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>30</y>
+                      <width>421</width>
+                      <height>91</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Home page, or the Main page, is responsible for displaying information about the load of your PC. It presents the most important parameters, namely the CPU, RAM and GPU load.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="faq_scan_page_white_background">
+                <property name="minimumSize">
+                 <size>
+                  <width>470</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>470</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: #FFF;
+border-radius: 10px;
+border-top-right-radius: 17px;
+border-bottom-right-radius: 17px;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_26">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="faq_scan_page_grey_background">
+                   <property name="minimumSize">
+                    <size>
+                     <width>465</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QFrame {
+	background-color: #383838;
+	border-radius: 10px;
+	border-top-left-radius: 8px;
+}
+QFrame:hover{
+	background-color: #3C3C3C;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QLabel" name="faq_scan_page_title">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>0</y>
+                      <width>401</width>
+                      <height>35</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>Scanning Page</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="faq_scan_page_btn">
+                    <property name="geometry">
+                     <rect>
+                      <x>410</x>
+                      <y>0</y>
+                      <width>55</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>55</width>
+                      <height>31</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>55</width>
+                      <height>31</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="imgs.qrc">
+                      <normaloff>:/general/imgs/general/down_arrow.png</normaloff>:/general/imgs/general/down_arrow.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="faq_scan_page_text">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>30</y>
+                      <width>421</width>
+                      <height>211</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;In the scan tab on top we are greeted by a small menu consisting of 3 buttons: Full, Folder and File. It is responsible for selecting the scanning mode. Full - scan of your entire computer for viruses. Folder - checking the folder you selected. File - checking the file you selected. Just below this menu is a circular indicator of the scanning process. At the very bottom there is a &amp;quot;Scan&amp;quot; button, after clicking on which a scan will be performed in the mode you selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="faq_virus_storage_page_white_background">
+                <property name="minimumSize">
+                 <size>
+                  <width>470</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>470</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: #FFF;
+border-radius: 10px;
+border-top-right-radius: 17px;
+border-bottom-right-radius: 17px;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_27">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="faq_virus_storage_page_grey_background">
+                   <property name="minimumSize">
+                    <size>
+                     <width>465</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QFrame {
+	background-color: #383838;
+	border-radius: 10px;
+	border-top-left-radius: 8px;
+}
+QFrame:hover{
+	background-color: #3C3C3C;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QLabel" name="faq_virus_storage_page_title">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>0</y>
+                      <width>401</width>
+                      <height>35</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>Virus Storage Page</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="faq_virus_storage_page_btn">
+                    <property name="geometry">
+                     <rect>
+                      <x>410</x>
+                      <y>0</y>
+                      <width>55</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>55</width>
+                      <height>31</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>55</width>
+                      <height>31</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="imgs.qrc">
+                      <normaloff>:/general/imgs/general/down_arrow.png</normaloff>:/general/imgs/general/down_arrow.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="faq_virus_storage_page_text">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>30</y>
+                      <width>421</width>
+                      <height>161</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Storage tab is responsible for storing and interacting with found viruses. The line with the found threat will contain information: the date of the scan, the type of threat and the path to the malicious file. There are also three buttons, the first is responsible for copying the path to the file, the second for deleting the infected file, and the third for removing it from the list of threats found.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="faq_faq_page_white_background">
+                <property name="minimumSize">
+                 <size>
+                  <width>470</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>470</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: #FFF;
+border-radius: 10px;
+border-top-right-radius: 17px;
+border-bottom-right-radius: 17px;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_28">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="faq_faq_page_grey_background">
+                   <property name="minimumSize">
+                    <size>
+                     <width>465</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QFrame {
+	background-color: #383838;
+	border-radius: 10px;
+	border-top-left-radius: 8px;
+}
+QFrame:hover{
+	background-color: #3C3C3C;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QLabel" name="faq_faq_page_title">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>0</y>
+                      <width>401</width>
+                      <height>35</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>FAQ Page</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="faq_faq_page_btn">
+                    <property name="geometry">
+                     <rect>
+                      <x>410</x>
+                      <y>0</y>
+                      <width>55</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>55</width>
+                      <height>31</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>55</width>
+                      <height>31</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="imgs.qrc">
+                      <normaloff>:/general/imgs/general/down_arrow.png</normaloff>:/general/imgs/general/down_arrow.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="faq_faq_page_text">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>30</y>
+                      <width>421</width>
+                      <height>91</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The FAQ tab, in which you are actually now, provides various instructions and answers to your questions. In the process of updates, the FAQ library will expand rapidly.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="faq_settings_page_white_background">
+                <property name="minimumSize">
+                 <size>
+                  <width>470</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>470</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: #FFF;
+border-radius: 10px;
+border-top-right-radius: 17px;
+border-bottom-right-radius: 17px;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_29">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="faq_settings_page_grey_background">
+                   <property name="minimumSize">
+                    <size>
+                     <width>465</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QFrame {
+	background-color: #383838;
+	border-radius: 10px;
+	border-top-left-radius: 8px;
+}
+QFrame:hover{
+	background-color: #3C3C3C;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QLabel" name="faq_settings_page_title">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>0</y>
+                      <width>401</width>
+                      <height>35</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>Settings Page</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="faq_settings_page_btn">
+                    <property name="geometry">
+                     <rect>
+                      <x>410</x>
+                      <y>0</y>
+                      <width>55</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>55</width>
+                      <height>31</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>55</width>
+                      <height>31</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="imgs.qrc">
+                      <normaloff>:/general/imgs/general/down_arrow.png</normaloff>:/general/imgs/general/down_arrow.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="faq_settings_page_text">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>30</y>
+                      <width>401</width>
+                      <height>71</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The Settings tab is responsible for flexibly changing various program parameters to improve its performance.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="faq_authors_white_background">
+                <property name="minimumSize">
+                 <size>
+                  <width>470</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>470</width>
+                  <height>34</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Segoe UI</family>
+                  <pointsize>10</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: #FFF;
+border-radius: 10px;
+border-top-right-radius: 17px;
+border-bottom-right-radius: 17px;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_17">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="faq_authors_grey_background">
+                   <property name="minimumSize">
+                    <size>
+                     <width>465</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QFrame {	
+	background-color: #383838;
+	border-radius: 10px;
+	border-top-left-radius: 8px;
+}
+QFrame:hover{
+	background-color: #3C3C3C;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QLabel" name="faq_authors_title">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>0</y>
+                      <width>401</width>
+                      <height>35</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>Authors</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="faq_authors_btn">
+                    <property name="geometry">
+                     <rect>
+                      <x>410</x>
+                      <y>0</y>
+                      <width>55</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>55</width>
+                      <height>31</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>55</width>
+                      <height>31</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="imgs.qrc">
+                      <normaloff>:/general/imgs/general/down_arrow.png</normaloff>:/general/imgs/general/down_arrow.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="faq_authors_text">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>40</y>
+                      <width>421</width>
+                      <height>91</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Developer - DIMFLIX&lt;/p&gt;&lt;p&gt;UX/UI Designer and Developer - DIMFLIX &lt;/p&gt;&lt;p&gt;Logo and Company name- PlayStack &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QLabel" name="faq_logo">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>0</y>
+           <width>361</width>
+           <height>361</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: transparent;
+background-position: center;
+background-repeat: no-repeat;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="imgs.qrc">:/general/imgs/general/SpectrumLogo.png</pixmap>
+         </property>
+        </widget>
+        <widget class="QFrame" name="faq_secret_way">
+         <property name="geometry">
+          <rect>
+           <x>760</x>
+           <y>47</y>
+           <width>53</width>
+           <height>47</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: none;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="SettingsPage">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="settings_main_menu">
+        <property name="styleSheet">
+         <string notr="true">background-color: #2C2C2C;
+border-radius: 15px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QScrollArea" name="settings_scroll_area">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>12</y>
+           <width>491</width>
+           <height>340</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">margin: 0px;
+padding: 0px;</string>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QAbstractScrollArea::AdjustIgnored</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <widget class="QWidget" name="settings_scroll_area_widget">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>485</width>
+            <height>340</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item alignment="Qt::AlignTop">
+            <widget class="QFrame" name="settings_scroll_area_frame">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_14">
+              <property name="spacing">
+               <number>10</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="settings_lang_white">
+                <property name="minimumSize">
+                 <size>
+                  <width>470</width>
+                  <height>35</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>470</width>
+                  <height>35</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: #FFF;
+border-radius: 10px;
+border-top-right-radius: 17px;
+border-bottom-right-radius: 17px;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_8">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="settings_lang_grey">
+                   <property name="minimumSize">
+                    <size>
+                     <width>465</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QFrame {
+	background-color: #383838;
+	border-radius: 10px;
+	border-top-left-radius: 8px;
+}
+QFrame:hover{
+	background-color: #3C3C3C;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QLabel" name="settings_lang_title">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>0</y>
+                      <width>395</width>
+                      <height>34</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>380</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>Language: English</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="settings_lang_btn">
+                    <property name="geometry">
+                     <rect>
+                      <x>410</x>
+                      <y>0</y>
+                      <width>55</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>55</width>
+                      <height>31</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>55</width>
+                      <height>31</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="imgs.qrc">
+                      <normaloff>:/general/imgs/general/down_arrow.png</normaloff>:/general/imgs/general/down_arrow.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QFrame" name="settings_lang_rus_frame">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>33</y>
+                      <width>464</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                    <property name="contextMenuPolicy">
+                     <enum>Qt::DefaultContextMenu</enum>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QFrame {
+	background-color: none;
+	border-radius: 0px;
+}
+
+QFrame:hover{
+	background-color: #3C3C3C;
+}</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <widget class="QLabel" name="settings_lang_rus_title">
+                     <property name="geometry">
+                      <rect>
+                       <x>10</x>
+                       <y>0</y>
+                       <width>401</width>
+                       <height>31</height>
+                      </rect>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI</family>
+                       <pointsize>12</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: #FFF;
+background: none;</string>
+                     </property>
+                     <property name="text">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Русский&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                     <property name="scaledContents">
+                      <bool>true</bool>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="settings_lang_rus_icon">
+                     <property name="geometry">
+                      <rect>
+                       <x>426</x>
+                       <y>0</y>
+                       <width>25</width>
+                       <height>35</height>
+                      </rect>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>25</width>
+                       <height>35</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>25</width>
+                       <height>35</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="pixmap">
+                      <pixmap resource="imgs.qrc">:/general/imgs/general/checked.png</pixmap>
+                     </property>
+                    </widget>
+                   </widget>
+                   <widget class="QFrame" name="settings_lang_eng_frame">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>63</y>
+                      <width>464</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QFrame {
+	background-color: none;
+	border-radius: 0px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+QFrame:hover{
+	background-color: #3C3C3C;
+}</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <widget class="QLabel" name="settings_lang_eng_title">
+                     <property name="geometry">
+                      <rect>
+                       <x>10</x>
+                       <y>0</y>
+                       <width>411</width>
+                       <height>31</height>
+                      </rect>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Segoe UI</family>
+                       <pointsize>12</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: #FFF;
+background: none;</string>
+                     </property>
+                     <property name="text">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;English&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                     <property name="scaledContents">
+                      <bool>true</bool>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="settings_lang_eng_icon">
+                     <property name="geometry">
+                      <rect>
+                       <x>426</x>
+                       <y>0</y>
+                       <width>25</width>
+                       <height>35</height>
+                      </rect>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>25</width>
+                       <height>35</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>25</width>
+                       <height>35</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="pixmap">
+                      <pixmap resource="imgs.qrc">:/general/imgs/general/checked.png</pixmap>
+                     </property>
+                    </widget>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QLabel" name="settings_logo">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>0</y>
+           <width>361</width>
+           <height>361</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: transparent;
+background-position: center;
+background-repeat: no-repeat;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="imgs.qrc">:/general/imgs/general/SpectrumLogo.png</pixmap>
+         </property>
+        </widget>
+        <widget class="QFrame" name="settings_secret_way">
+         <property name="geometry">
+          <rect>
+           <x>760</x>
+           <y>47</y>
+           <width>53</width>
+           <height>47</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: none;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="VirusStoragePage">
+     <layout class="QVBoxLayout" name="verticalLayout_31">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="virus_storage_main_menu">
+        <property name="styleSheet">
+         <string notr="true">background-color: #2C2C2C;
+border-radius: 15px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QScrollArea" name="virus_storage_scroll_area">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>851</width>
+           <height>341</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">margin: 0px;
+padding: 0px;</string>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QAbstractScrollArea::AdjustIgnored</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <widget class="QWidget" name="virus_storage_scroll_area_widget">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>845</width>
+            <height>341</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_22">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item alignment="Qt::AlignTop">
+            <widget class="QFrame" name="virus_storage_scroll_area_frame">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_23">
+              <property name="spacing">
+               <number>10</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="virus_storage_main_title">
+                <property name="minimumSize">
+                 <size>
+                  <width>830</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>830</width>
+                  <height>130</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: #FFF;
+border-radius: 10px;
+border-top-right-radius: 15px;
+border-bottom-right-radius: 15px;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_24">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="virus_storage_title_grey">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QFrame {
+background-color: #383838;
+border-radius: 10px;
+border-top-left-radius: 8px;
+}
+QFrame:hover{
+	background-color: #3C3C3C;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QLabel" name="virus_storage_main_title_label">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>5</y>
+                      <width>451</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>16</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>VIRUS STORAGE</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="virus_storage_warning">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>40</y>
+                      <width>721</width>
+                      <height>51</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>11</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: #FFF;
+background: none;</string>
+                    </property>
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Warning - the antivirus is under development, which may cause inaccurate virus definitions.  A huge request to check the file yourself, in order to avoid deleting valuable information or system files&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="virus_storage_finded_viruses">
+                <property name="minimumSize">
+                 <size>
+                  <width>500</width>
+                  <height>230</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>830</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: #FFF;
+border-radius: 10px;
+border-top-right-radius: 17px;
+border-bottom-right-radius: 17px;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_30">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="virus_storage_finded_viruses_grey">
+                   <property name="minimumSize">
+                    <size>
+                     <width>465</width>
+                     <height>35</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QFrame {
+	background-color: #383838;
+	border-radius: 10px;
+	border-top-left-radius: 8px;
+}
+
+QFrame:hover{
+	background-color: #3C3C3C;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_32">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>10</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>4</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>4</number>
+                    </property>
+                    <item>
+                     <widget class="QTableWidget" name="virus_storage_table">
+                      <property name="font">
+                       <font>
+                        <pointsize>11</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="focusPolicy">
+                       <enum>Qt::NoFocus</enum>
+                      </property>
+                      <property name="layoutDirection">
+                       <enum>Qt::LeftToRight</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QTableWidget {	
+	background-color: transparent;
+}
+QTableWidget::item{
+	color: rgb(255, 255, 255);
+}
+
+QScrollBar:horizontal {
+	margin-left: 10px;
+}
+ QScrollBar:vertical {
+	border: none;
+    background: rgb(52, 59, 72);
+    width: 14px;
+    margin: 21px 0 21px 0;
+	border-radius: 0px;
+ }
+
+QTableWidget::horizontalHeader {	
+	background-color: rgb(81, 255, 0);
+}
+QHeaderView::section:horizontal
+{
+    border: 1px solid rgb(44, 49, 60);
+	background-color: rgb(39, 44, 54);
+	padding: 3px;
+	border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+QHeaderView::section:vertical
+{
+    border: 1px solid rgb(44, 49, 60);
+}</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Sunken</enum>
+                      </property>
+                      <property name="verticalScrollBarPolicy">
+                       <enum>Qt::ScrollBarAlwaysOff</enum>
+                      </property>
+                      <property name="horizontalScrollBarPolicy">
+                       <enum>Qt::ScrollBarAlwaysOff</enum>
+                      </property>
+                      <property name="sizeAdjustPolicy">
+                       <enum>QAbstractScrollArea::AdjustToContents</enum>
+                      </property>
+                      <property name="autoScroll">
+                       <bool>false</bool>
+                      </property>
+                      <property name="editTriggers">
+                       <set>QAbstractItemView::NoEditTriggers</set>
+                      </property>
+                      <property name="tabKeyNavigation">
+                       <bool>false</bool>
+                      </property>
+                      <property name="showDropIndicator" stdset="0">
+                       <bool>false</bool>
+                      </property>
+                      <property name="dragDropOverwriteMode">
+                       <bool>false</bool>
+                      </property>
+                      <property name="selectionMode">
+                       <enum>QAbstractItemView::NoSelection</enum>
+                      </property>
+                      <property name="selectionBehavior">
+                       <enum>QAbstractItemView::SelectItems</enum>
+                      </property>
+                      <property name="textElideMode">
+                       <enum>Qt::ElideNone</enum>
+                      </property>
+                      <property name="verticalScrollMode">
+                       <enum>QAbstractItemView::ScrollPerItem</enum>
+                      </property>
+                      <property name="horizontalScrollMode">
+                       <enum>QAbstractItemView::ScrollPerItem</enum>
+                      </property>
+                      <property name="showGrid">
+                       <bool>false</bool>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>false</bool>
+                      </property>
+                      <property name="cornerButtonEnabled">
+                       <bool>false</bool>
+                      </property>
+                      <attribute name="horizontalHeaderVisible">
+                       <bool>false</bool>
+                      </attribute>
+                      <attribute name="horizontalHeaderHighlightSections">
+                       <bool>false</bool>
+                      </attribute>
+                      <attribute name="verticalHeaderVisible">
+                       <bool>false</bool>
+                      </attribute>
+                      <column>
+                       <property name="text">
+                        <string>time</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>threats</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>path</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>copy_btn</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>delete_btn</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>close_btn</string>
+                       </property>
+                      </column>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QScrollArea" name="bottom_menu_scroll_area">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>435</y>
+      <width>876</width>
+      <height>113</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QWidget" name="bottom_menu_scroll_area_widget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1098</width>
+       <height>108</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_25">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item alignment="Qt::AlignTop">
+       <widget class="QFrame" name="bottom_menu_frame">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="spacing">
+          <number>12</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QFrame" name="bottom_menu_home">
+           <property name="minimumSize">
+            <size>
+             <width>210</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>210</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFrame {
+	background-color: #2C2C2C;
+	border-radius: 15px;
+}
+
+QFrame:hover {
+	border: 2px solid #FFF;
+	background-color: #3C3C3C;
+}
+</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="home_title">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>10</y>
+              <width>141</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;
+color: #FFF;
+background: none</string>
+            </property>
+            <property name="text">
+             <string>Home Page</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="home_description">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>74</y>
+              <width>211</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>8</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;
+color: #FFFFFF;
+background-color: none;</string>
+            </property>
+            <property name="text">
+             <string>PC performance monitoring</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="home_icon">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>41</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;
+border-radius: 0px;
+background: none;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="imgs.qrc">:/bottom_menu/imgs/bottom_menu/home_icon.png</pixmap>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="bottom_menu_scanning">
+           <property name="minimumSize">
+            <size>
+             <width>210</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>210</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFrame {
+	background-color: #2C2C2C;
+	border-radius: 15px;
+}
+
+QFrame:hover {
+	border: 2px solid #FFF;	
+	background-color: #3C3C3C;
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="scanning_title">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>10</y>
+              <width>141</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;
+color: #FFF;
+background: none;</string>
+            </property>
+            <property name="text">
+             <string>Scanning</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="scanning_description">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>74</y>
+              <width>211</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>8</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;
+color: #FFFFFF;
+background-color: none;</string>
+            </property>
+            <property name="text">
+             <string>Scan your PC for viruses</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="scanning_icon">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>41</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;
+border-radius: 0px;
+background: none;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="imgs.qrc">:/bottom_menu/imgs/bottom_menu/scanning_icon.png</pixmap>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="bottom_menu_virus_storage">
+           <property name="minimumSize">
+            <size>
+             <width>210</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>210</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFrame {
+	background-color: #2C2C2C;
+	border-radius: 15px;
+}
+
+QFrame:hover {
+	border: 2px solid #FFF;
+	background-color: #3C3C3C;
+}
+</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="virus_storage_title">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>10</y>
+              <width>141</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;
+color: #FFF;
+background: none</string>
+            </property>
+            <property name="text">
+             <string>Virus storage</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="virus_storage_description">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>74</y>
+              <width>211</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>8</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;
+color: #FFFFFF;
+background-color: none;</string>
+            </property>
+            <property name="text">
+             <string>Storage of found viruses</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="virus_storage_icon">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>41</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;
+border-radius: 0px;
+background: none;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="imgs.qrc">:/bottom_menu/imgs/bottom_menu/virus_storage_icon.png</pixmap>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="bottom_menu_faq">
+           <property name="minimumSize">
+            <size>
+             <width>210</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>210</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFrame {
+	background-color: #2C2C2C;
+	border-radius: 15px;
+}
+
+QFrame:hover {
+	border: 2px solid #FFF;
+	background-color: #3C3C3C;
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="faq_description">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>74</y>
+              <width>211</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>8</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;
+color: #FFFFFF;
+background-color: none;</string>
+            </property>
+            <property name="text">
+             <string>Frequently asked questions</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="faq_title">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>10</y>
+              <width>141</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;
+color: #FFF;
+background: none;</string>
+            </property>
+            <property name="text">
+             <string>FAQ</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="faq_icon">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>41</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;
+border-radius: 0px;
+background: none;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="imgs.qrc">:/bottom_menu/imgs/bottom_menu/faq_icon.png</pixmap>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="bottom_menu_settings">
+           <property name="minimumSize">
+            <size>
+             <width>210</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFrame {
+	background-color: #2C2C2C;
+	border-radius: 15px;
+}
+
+QFrame:hover {
+	border: 2px solid #FFF;
+	background-color: #3C3C3C;
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="settings_title">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>10</y>
+              <width>141</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;
+color: #FFF;
+background: none;</string>
+            </property>
+            <property name="text">
+             <string>Settings</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="settings_description">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>74</y>
+              <width>211</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>8</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;
+color: #FFFFFF;
+background-color: none;</string>
+            </property>
+            <property name="text">
+             <string>Application Settings</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="settiongs_icon">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>41</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: none;
+border-radius: 0px;
+background: none;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="imgs.qrc">:/bottom_menu/imgs/bottom_menu/settings_icon.png</pixmap>
+            </property>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="imgs.qrc"/>
+  <include location="imgs.qrc"/>
+ </resources>
+ <connections/>
+</ui>
