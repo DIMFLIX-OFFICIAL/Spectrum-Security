@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		{% block title%}{% endblock %}
+		{% block links%}{% endblock %}
+</head>
+
+<body>
+	<section class="Navbar">
+			<div class="NavbarContainer">
+				<div class="NavbarLogo">
+					<h1>SPECTRUM</h1>
+					<h1>SECURITY</h1>
+				</div>
+				<div class="NavbarLinks">
+					<a href="/download">
+						<div class="NavbarLink">
+							<p class="LinkTitle">Download</p>
+							<div class="LinkBottomLine"></div>
+						</div>
+					</a>
+					<a href="https://t.me/dimflix_official" target="_blank">
+						<div class="NavbarLink">
+							<p class="LinkTitle">Support</p>
+							<div class="LinkBottomLine"></div>
+						</div>
+					</a>
+					<!--
+					<a href="/faq">
+						<div class="NavbarLink">
+							<p class="LinkTitle">FAQ</p>
+							<div class="LinkBottomLine"></div>
+						</div>
+					</a>
+					-->
+				</div>
+			</div>
+	</section>
+
+	{% block body%}{% endblock %}
+	{% block scripts%}{% endblock %}
+</body>
+</html>

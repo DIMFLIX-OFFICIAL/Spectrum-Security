@@ -1,0 +1,1006 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #141414;
+}
+a:active,
+a:hover,
+a{
+  text-decoration: none;
+  color: #666;
+}
+.section{
+    width: 100%;
+}
+.container{
+    max-width: 1440px;
+    padding: 0 80px;
+    height: 100%;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+}
+
+.title {
+    animation: 2s title-neon-animation alternate-reverse infinite;
+}
+
+@keyframes title-neon-animation {
+    from { text-shadow: 0 0 1px #FFF, 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF;}
+    to { text-shadow: 0 0 20px #FFF, 0 0 24px #FFF, 0 0 27px #FFF, 0 0 30px #FFF,}
+}
+/* Navbar */
+.Navbar{
+    width: 100%;
+    height: 120px;
+    top: 0px;
+
+    background: rgba(32, 32, 32, 0.3);
+    backdrop-filter: blur(10px);
+}
+.Navbar .NavbarContainer{
+    max-width: 1440px;
+    padding: 0 80px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+.Navbar .NavbarContainer .NavbarLogo{}
+.Navbar .NavbarContainer .NavbarLogo h1{
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+    transition: all 0.5s ease;
+}
+.Navbar .NavbarContainer .NavbarLinks{
+    transition: all 0.5s ease;
+    display: flex;
+}
+.Navbar .NavbarContainer .NavbarLinks a{
+    margin: 10px 30px 10px 30px;
+}
+.Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+    font-weight: 600;
+    font-size: 22px;
+    color: white;
+}
+.Navbar .NavbarContainer .NavbarLinks .NavbarLink .LinkBottomLine{
+    width: 30px;
+    height: 2px;
+    background: white;
+    margin-top: 5px;
+    transition: all 0.5s ease;
+}
+.Navbar .NavbarContainer .NavbarLinks .NavbarLink:hover .LinkBottomLine{
+    width: 100%;
+}
+
+/* Content */
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* About */
+.content .ContentAbout{
+    max-width: 850px;
+}
+.content .ContentAbout .title{
+    padding: 50px 0;
+    font-weight: 700;
+    font-size: 40px;
+    color: white;
+    transition: all 0.5s ease;
+}
+.content .ContentAbout .text{
+    max-width: 780px;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 15px 0 15px 0;
+    color: white;
+    transition: all 0.5s ease;
+    margin: 10px 0;
+}
+.content .ContentAbout .btn{
+    margin: 25px 0;
+    border: 2px solid #585858;
+    border-radius: 15px;
+    width: fit-content;
+    padding: 10px 20px 10px 20px;
+    transition: all 0.5s ease;
+}
+.content .ContentAbout .btn:hover{
+    border: 2px solid #6b6b6b;
+}
+.content .ContentAbout .btn p{
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+/* Logo */
+.ContentImage{
+    margin: 10px;
+    max-width: 370px;
+    height: 100%;
+}
+.ContentImage img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ScrollDown */
+.Scroll{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 170px;
+}
+.Scroll .title{
+    width: fit-content;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+}
+.Scroll .title p{
+    font-weight: 400;
+    font-size: 22px;
+    color: white;
+    transition: all 0.5s ease;
+}
+.Scroll .icon{
+    margin: 0 auto;
+    width: fit-content;
+    color: white;
+    font-size: 49px;
+}
+
+/* Scanning */
+.Scanning{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+}
+.Scanning .ScanningContent{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.Scanning .ScanningContent .title{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    transition: all 0.5s ease;
+}
+.Scanning .ScanningContent .text{
+    text-align: center;
+    color: #C7C3C3;
+    font-weight: 400;
+    font-size: 22px;
+    transition: all 0.5s ease;
+    margin: 10px 0;
+}
+
+.Scanning .ScanningImages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Scanning .ScanningImages .image{
+    padding: 65px;
+}
+.Scanning .ScanningImages .image img{
+    padding: 25px;
+}
+.Scanning .ScanningImages .image .btn{
+    border: 2px solid #585858;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    padding: 10px 0;
+    margin: 150px 0 100px;
+    position: relative;
+}
+.Scanning .ScanningImages .image .btn input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.Scanning .ScanningImages .image .btn:hover{
+    border: 2px solid #6b6b6b;
+}
+.Scanning .ScanningImages .image .btn p{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+/* Benefits */
+.Benefits{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+}
+.Benefits .BenefitsContent{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.Benefits .BenefitsContent .title{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    transition: all 0.5s ease;
+}
+.Benefits .BenefitsContent .text{
+    text-align: center;
+    margin: 10px 0;
+    color: #C7C3C3;
+    font-weight: 400;
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+
+
+.BenefitsList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: all 0.5s ease;
+}
+
+.BenefitsBlock{
+    min-width: 400px;
+    max-width: 400px;
+    height: 240px;
+    background: #1F1F1F;
+    border: 1px solid #595959;
+    border-radius: 5px;
+    margin: 13px;
+}
+.BenefitsBlock .title{
+    display: flex;
+    align-items: center;
+}
+.BenefitsBlock .title img{
+    margin: 15px;
+}
+.BenefitsBlock .title p{
+    color: white;
+    font-weight: 500;
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+.BenefitsBlock .text{
+    margin: 15px;
+    color: #C7C3C3;
+    font-weight: 400;
+    font-size: 16px;
+}
+.BenefitsSlider .btn-left{
+    display: none;
+}
+.BenefitsSlider .btn-right{
+    display: none;
+}
+
+
+
+/* Upward */
+.upward{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border-radius: 50%;
+    border: 2px solid #C7C3C3;
+    color: #C7C3C3;
+    box-shadow: 0px 0px 15px 0px rgba(199, 195, 195, 0.2);
+    transition: 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.upward.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@media (max-width: 1440px) {
+    .container{
+        padding: 0 80px;
+    }
+    .Navbar .NavbarContainer{
+        padding: 0 80px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 24px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 10px 30px 10px 30px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 18px;
+    }
+    /* Content */
+    .content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* About */
+    .content .ContentAbout{
+        max-width: 800px;
+    }
+    .content .ContentAbout .title{
+        padding: 50px 0;
+        font-size: 34px;
+    }
+    .content .ContentAbout .text{
+        max-width: 580px;
+        font-size: 16px;
+        padding: 15px 0 15px 0;
+    }
+    .content .ContentAbout .btn{
+        margin: 25px 0;
+        padding: 10px 20px 10px 20px;
+        transition: all 0.5s ease;
+    }
+    .content .ContentAbout .btn p{
+        color: white;
+        font-weight: 600;
+        font-size: 26px;
+    }
+
+    /* Logo */
+    .ContentImage{
+        margin: 10px;
+        max-width: 370px;
+    }
+
+
+    /* ScrollDown */
+    .Scroll{
+        margin: 50px 0;
+    }
+    .Scroll .title p{
+        font-size: 20px;
+    }
+    .Scroll .icon{
+        font-size: 40px;
+    }
+
+    /* Scanning */
+    .Scanning{
+        padding: 50px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 50px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 34px;
+    }
+    .Scanning .ScanningContent .text{
+        font-size: 16px;
+        transition: all 0.5s ease;
+    }
+
+    .Scanning .ScanningImages{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Scanning .ScanningImages .image{
+        padding: 50px;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 20px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        padding: 10px 0;
+        margin: 150px 0 100px;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 22px;
+    }
+
+    /* Benefits */
+    .Benefits{
+        padding: 50px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 50px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 34px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 16px;
+    }
+
+
+    .BenefitsList{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .BenefitsBlock{
+        min-width: 510px;
+        max-width: 510px;
+        height: 240px;
+    }
+    .BenefitsBlock .title{
+        display: flex;
+        align-items: center;
+    }
+    .BenefitsBlock .title img{
+        scale: 0.8;
+        margin: 15px;
+    }
+    .BenefitsBlock .title p{
+        font-size: 18px;
+        transition: all 0.5s ease;
+    }
+    .BenefitsBlock .text{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .container{
+        padding: 0 80px;
+    }
+    .Navbar .NavbarContainer{
+        padding: 0 80px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 22px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 10px 30px 10px 30px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 16px;
+    }
+    /* Content */
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* About */
+    .content .ContentAbout{
+        margin: 0 auto;
+        max-width: 600px;
+    }
+    .content .ContentAbout .title{
+        text-align: center;
+        padding: 40px 0;
+        font-size: 32px;
+    }
+    .content .ContentAbout .text{
+        text-align: center;
+        max-width: 580px;
+        font-size: 16px;
+        padding: 15px 0 15px 0;
+    }
+    .content .ContentAbout .btn{
+        margin: 25px auto;
+        padding: 10px 20px 10px 20px;
+    }
+    .content .ContentAbout .btn p{
+        font-size: 24px;
+    }
+
+    /* Logo */
+    .ContentImage{
+
+        margin: 10px auto;
+        max-width: 370px;
+    }
+
+
+    /* ScrollDown */
+    .Scroll{
+        margin: 40px 0;
+    }
+    .Scroll .title p{
+        font-size: 18px;
+    }
+    .Scroll .icon{
+        font-size: 38px;
+    }
+
+    /* Scanning */
+    .Scanning{
+        padding: 20px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 20px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 32px;
+    }
+    .Scanning .ScanningContent .text{
+        font-size: 14px;
+    }
+
+    .Scanning .ScanningImages{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Scanning .ScanningImages .image{
+        padding: 20px;
+    }
+    .Scanning .ScanningImages .image:nth-child(1){
+        display: none;
+    }
+    .Scanning .ScanningImages .image:nth-child(3){
+        display: none;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 20px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        padding: 10px 0;
+        margin: 40px 0 40px;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 20px;
+    }
+
+    /* Benefits */
+    .Benefits{
+        padding: 20px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 20px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 32px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 14px;
+    }
+
+
+    .BenefitsList{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .BenefitsBlock{
+        max-width: 800px;
+        width: 100%;
+        height: 240px;
+    }
+    .BenefitsBlock .title{
+        display: flex;
+        align-items: center;
+    }
+    .BenefitsBlock .title img{
+        scale: 0.7;
+        margin: 15px;
+    }
+    .BenefitsBlock .title p{
+        font-size: 16px;
+        transition: all 0.5s ease;
+    }
+    .BenefitsBlock .text{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 700px) {
+    .container{
+        padding: 0 80px;
+    }
+    .Navbar .NavbarContainer{
+        padding: 0 80px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 22px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 5px 10px 5px 10px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 16px;
+    }
+    /* Content */
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* About */
+    .content .ContentAbout{
+        margin: 0 auto;
+    }
+    .content .ContentAbout .title{
+        text-align: center;
+        padding: 20px 0;
+        font-size: 24px;
+    }
+    .content .ContentAbout .text{
+        text-align: center;
+        max-width: 280px;
+        font-size: 12px;
+        padding: 5px 0 5px 0;
+        margin: 0 auto;
+    }
+    .content .ContentAbout .btn{
+        margin: 25px auto;
+        padding: 10px 20px 10px 20px;
+    }
+    .content .ContentAbout .btn p{
+        font-size: 22px;
+    }
+
+    /* Logo */
+    .ContentImage{
+        scale: 0.8;
+        margin: 10px auto;
+        max-width: 370px;
+    }
+
+
+    /* ScrollDown */
+    .Scroll{
+        margin: 20px 0;
+    }
+    .Scroll .title p{
+        font-size: 18px;
+    }
+    .Scroll .icon{
+        font-size: 38px;
+    }
+
+    /* Scanning */
+    .Scanning{
+        padding: 20px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 20px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 24px;
+    }
+    .Scanning .ScanningContent .text{
+        font-size: 12px;
+    }
+
+    .Scanning .ScanningImages{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Scanning .ScanningImages .image{
+        scale: 0.8;
+        padding: 20px;
+    }
+    .Scanning .ScanningImages .image:nth-child(1){
+        display: none;
+    }
+    .Scanning .ScanningImages .image:nth-child(3){
+        display: none;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 20px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        padding: 10px 0;
+        margin: 20px 0 20px;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 20px;
+    }
+
+    /* Benefits */
+    .Benefits{
+        padding: 20px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 20px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 24px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 12px;
+    }
+
+
+    .BenefitsList{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        transition: all 0.5s ease;
+    }
+
+    .BenefitsBlock{
+        min-width: 300px;
+        height: 200px;
+        background: #1F1F1F;
+        border: 1px solid #595959;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .BenefitsBlock .title{
+        display: flex;
+        align-items: center;
+    }
+    .BenefitsBlock .title img{
+        margin: 15px;
+        scale: 0.7;
+    }
+    .BenefitsBlock .title p{
+        color: white;
+        font-weight: 500;
+        font-size: 16px;
+        transition: all 0.5s ease;
+    }
+    .BenefitsBlock .text{
+        margin: 15px;
+        color: #C7C3C3;
+        font-weight: 400;
+        font-size: 11px;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+    .container{
+        padding: 0 40px;
+    }
+    .Navbar .NavbarContainer{
+        padding: 0 40px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 20px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 5px 10px 5px 10px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 14px;
+    }
+    /* Content */
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* About */
+    .content .ContentAbout{
+        margin: 0 auto;
+    }
+    .content .ContentAbout .title{
+        text-align: center;
+        padding: 10px 0;
+        font-size: 18px;
+    }
+    .content .ContentAbout .text{
+        text-align: center;
+        max-width: 260px;
+        font-size: 12px;
+        padding: 5px 0 5px 0;
+        margin: 0 auto;
+    }
+    .content .ContentAbout .btn{
+        margin: 25px auto;
+        padding: 10px 20px 10px 20px;
+    }
+    .content .ContentAbout .btn p{
+        font-size: 20px;
+    }
+
+    /* Logo */
+    .ContentImage{
+        margin: 10px auto;
+        max-width: 370px;
+    }
+
+
+    /* ScrollDown */
+    .Scroll{
+        margin: 10px 0;
+    }
+    .Scroll .title p{
+        font-size: 16px;
+    }
+    .Scroll .icon{
+        font-size: 36px;
+    }
+
+    /* Scanning */
+    .Scanning{
+        padding: 10px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 10px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 18px;
+    }
+    .Scanning .ScanningContent .text{
+        font-size: 12px;
+    }
+
+    .Scanning .ScanningImages{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Scanning .ScanningImages .image{
+        scale: 0.8;
+        padding: 10px;
+    }
+    .Scanning .ScanningImages .image:nth-child(1){
+        display: none;
+    }
+    .Scanning .ScanningImages .image:nth-child(3){
+        display: none;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 10px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        padding: 10px 0;
+        margin: 40px 0 0px;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 18px;
+    }
+
+    /* Benefits */
+    .Benefits{
+        padding: 20px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 20px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 18px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 12px;
+    }
+
+
+    .BenefitsList{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        transition: all 0.5s ease;
+    }
+
+    .BenefitsBlock{
+        min-width: 300px;
+        height: 200px;
+        background: #1F1F1F;
+        border: 1px solid #595959;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .BenefitsBlock .title{
+        display: flex;
+        align-items: center;
+    }
+    .BenefitsBlock .title img{
+        margin: 15px;
+        scale: 0.7;
+    }
+    .BenefitsBlock .title p{
+        color: white;
+        font-weight: 500;
+        font-size: 16px;
+        transition: all 0.5s ease;
+    }
+    .BenefitsBlock .text{
+        margin: 15px;
+        color: #C7C3C3;
+        font-weight: 400;
+        font-size: 11px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 385px) {
+    .container{
+        padding: 0 25px;
+    }
+    /* Benefits */
+    .Benefits{
+        padding: 10px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 80px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 14px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 10px;
+    }
+
+
+    .BenefitsList{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        transition: all 0.5s ease;
+    }
+
+    .BenefitsBlock{
+        min-width: 100px;
+        width: 280px;
+        height: 200px;
+        background: #1F1F1F;
+        border: 1px solid #595959;
+        border-radius: 5px;
+        margin-right: 0;
+    }
+    .BenefitsBlock .title{
+        display: flex;
+        align-items: center;
+    }
+    .BenefitsBlock .title img{
+        margin: 5px;
+        scale: 0.7;
+    }
+    .BenefitsBlock .title p{
+        color: white;
+        font-weight: 500;
+        font-size: 14px;
+        transition: all 0.5s ease;
+    }
+    .BenefitsBlock .text{
+        margin: 5px;
+        color: #C7C3C3;
+        font-weight: 400;
+        font-size: 11px;
+    }
+
+}
+
+
+
+
+
+

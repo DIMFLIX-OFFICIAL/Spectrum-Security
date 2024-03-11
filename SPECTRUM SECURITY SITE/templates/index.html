@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block title%}
+<title>SPECTRUM SECURITY</title>
+{% endblock %}
+
+
+{% block links%}
+<link rel="icon" href="{{ url_for('static', filename='/images/favicon.ico') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+{% endblock %}
+
+
+
+
+
+{% block body%}
+    <section class="section">
+        <div class="container">
+            <div class="content">
+                <div class="ContentAbout">
+                    <div class="title">
+                        <h1>Инновационный подход защиты для бизнеса</h1>
+                    </div>
+                    <div class="text">
+                        <p>Киберугрозы сложны сами по себе. Наши решения обеспечивают максимум защиты, позволяя вам не волноваться о киберугрозах и сосредоточиться на своем бизнесе.</p>
+                    </div>
+                    <a href="/download">
+                        <div class="btn">
+                            <p>Download</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ContentImage">
+                    <img src="{{ url_for('static', filename='/images/SpectrumLogo.png') }}">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="Scroll">
+                <div class="title"><p>SCROLL DOWN</p></div>
+                <div class="icon">
+                    <i class='bx bx-chevrons-down'></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="Benefits">
+                <div class="BenefitsContent">
+                    <div class="title">
+                        <h1>МЫ СОЗДАЕМ ТО, ЧТО НУЖНО И ЦЕННО ДЛЯ БИЗНЕСА</h1>
+                    </div>
+                    <div class="text">
+                        <p>Наша система разработана для комфортного и удобного использования в вашем бизнесе</p>
+                    </div>
+                </div>
+                <div class="BenefitsContainer">
+                    <div class="BenefitsSlider">
+                            <div class="BenefitsList">
+                                <div class="BenefitsBlock">
+                                    <div class="title">
+                                        <img src="{{ url_for('static', filename='/images/Benefits-icons/icon-1.png') }}">
+                                        <p>Продуманность<br>системы</p>
+                                    </div>
+                                    <div class="text">
+                                        <p>Наш проект имеет огромную базу вредоносных кодов, с помощью которых мы обнаружим любой вирус.</p>
+                                    </div>
+                                </div>
+                                <div class="BenefitsBlock">
+                                    <div class="title">
+                                        <img src="{{ url_for('static', filename='/images/Benefits-icons/icon-2.png') }}">
+                                        <p>Скорость<br>сканирования</p>
+                                    </div>
+                                    <div class="text">
+                                        <p>По нашей статистике антивирус сканирует порядка 30.000 файлов в минуту.</p>
+                                    </div>
+                                </div>
+                                <div class="BenefitsBlock">
+                                    <div class="title">
+                                        <img src="{{ url_for('static', filename='/images/Benefits-icons/icon-3.png') }}">
+                                        <p>Очистка и<br>оптимизация</p>
+                                    </div>
+                                    <div class="text">
+                                        <p>В Spectrum Security реализован функцианал, позволяющий очистить вашу систему от лишнего мусора.</p>
+                                    </div>
+                                </div>
+                                <div class="BenefitsBlock">
+                                    <div class="title">
+                                        <img src="{{ url_for('static', filename='/images/Benefits-icons/icon-4.png') }}">
+                                        <p>Удобный<br>дизайн</p>
+                                    </div>
+                                    <div class="text">
+                                        <p>В нашей системе построен актуальный и стильный дизайн с учетом современных мировых трендов</p>
+                                    </div>
+                                </div>
+                                <div class="BenefitsBlock">
+                                    <div class="title">
+                                        <img src="{{ url_for('static', filename='/images/Benefits-icons/icon-5.png') }}">
+                                        <p>Регулярные<br>обновления</p>
+                                    </div>
+                                    <div class="text">
+                                        <p>Прямо сейчас мы разрабатываем множество удобных функций для нашего приложения. </p>
+                                    </div>
+                                </div>
+                                <div class="BenefitsBlock">
+                                    <div class="title">
+                                        <img src="{{ url_for('static', filename='/images/Benefits-icons/icon-6.png') }}">
+                                        <p>Open - Source<br>проект</p>
+                                    </div>
+                                    <div class="text">
+                                        <p>Наш проект является Опенсурсным. Это означает то, что вы сможете в любой момент посмотреть исходники.</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="upward" onclick="scrollToTop()">
+        <i class='bx bx-up-arrow-alt'></i>
+    </div>
+{% endblock %}
+
+{% block scripts%}
+<script src="{{ url_for('static', filename='/js/script.js') }}"></script>
+{% endblock %}
+
