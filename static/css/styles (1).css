@@ -1,0 +1,2666 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #141414;
+}
+a:active, 
+a:hover,  
+a{
+  text-decoration: none;
+  color: #666;
+}
+.section{
+    width: 100%;
+}
+.container{
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+}
+
+.title {
+    animation: 2s title-neon-animation alternate-reverse infinite;
+}
+
+@keyframes title-neon-animation {
+    from { text-shadow: 0 0 1px #FFF, 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF;}
+    to { text-shadow: 0 0 20px #FFF, 0 0 24px #FFF, 0 0 27px #FFF, 0 0 30px #FFF,}
+}
+
+/* Navbar */
+.Navbar{
+    width: 100%;
+    height: 120px;
+    top: 0px;
+
+    background: rgba(32, 32, 32, 0.3);
+    backdrop-filter: blur(10px);
+}
+.Navbar .NavbarContainer{
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+.Navbar .NavbarContainer .NavbarLogo{}
+.Navbar .NavbarContainer .NavbarLogo h1{
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+    transition: all 0.5s ease;
+}
+.Navbar .NavbarContainer .NavbarLinks{
+    display: flex;
+}
+.Navbar .NavbarContainer .NavbarLinks a{
+    margin: 10px 30px 10px 30px;
+}
+.Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+    font-weight: 600;
+    font-size: 22px;
+    color: white;
+}
+.Navbar .NavbarContainer .NavbarLinks .NavbarLink .LinkBottomLine{
+    width: 30px;
+    height: 2px;
+    background: white;
+    margin-top: 5px;
+    transition: all 0.5s ease;
+}
+.Navbar .NavbarContainer .NavbarLinks .NavbarLink:hover .LinkBottomLine{
+    width: 100%;
+}
+
+/* Content */
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* About */
+.content .ContentAbout{
+    max-width: 850px;
+}
+.content .ContentAbout .title{
+    padding: 50px 0 50px 0;
+    font-weight: 700;
+    font-size: 40px;
+    color: white;
+    transition: all 0.5s ease;
+}
+.content .ContentAbout .text{
+    max-width: 780px;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 15px 0 15px 0;
+    color: white;
+    transition: all 0.5s ease;
+}
+.content .ContentAbout .btn{
+    margin: 25px 0;
+    border: 2px solid #585858;
+    border-radius: 15px;
+    width: fit-content;
+    padding: 10px 20px 10px 20px;
+    transition: all 0.5s ease;
+}
+.content .ContentAbout .btn:hover{
+    border: 2px solid #6b6b6b;
+}
+.content .ContentAbout .btn p{
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+/* Logo */
+.ContentImage{
+    margin: 10px;
+    width: 370px;
+    height: 100%;
+    -webkit-filter: drop-shadow(0px 0px 0px rgba(255,255,255,0.80));
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+	animation: 2s ContentImageAnimation alternate-reverse infinite;
+}
+.ContentImage img{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes ContentImageAnimation {
+    from { -webkit-filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8));}
+}
+
+/* ScrollDown */
+.Scroll{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px 0;
+}
+.Scroll .title{
+    width: fit-content;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+}
+.Scroll .title p{
+    font-weight: 400;
+    font-size: 22px;
+    color: white;
+    transition: all 0.5s ease;
+}
+.Scroll .icon{
+    margin: 0 auto;
+    width: fit-content;
+    color: white;
+    font-size: 49px;
+}
+
+/* Scanning */
+.Scanning{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+}
+.Scanning .ScanningContent{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.Scanning .ScanningContent .title{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    transition: all 0.5s ease;
+}
+.Scanning .ScanningContent .text{
+    text-align: center;
+    color: #C7C3C3;
+    font-weight: 400;
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+
+.Scanning .ScanningImages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Scanning .ScanningImages .image{
+    padding: 65px;
+}
+.Scanning .ScanningImages .image img{
+    padding: 25px;
+}
+.Scanning .ScanningImages .image .btn{
+    border: 2px solid #585858;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    padding: 10px 0;
+    margin: 150px 0 100px;
+}
+.Scanning .ScanningImages .image .btn:hover{
+    border: 2px solid #6b6b6b;
+}
+.Scanning .ScanningImages .image .btn p{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+/* Benefits */
+.Benefits{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+}
+.Benefits .BenefitsContent{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.Benefits .BenefitsContent .title{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    transition: all 0.5s ease;
+}
+.Benefits .BenefitsContent .text{
+    text-align: center;
+    color: #C7C3C3;
+    font-weight: 400;
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+
+
+.BenefitsList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: all 0.5s ease;
+}
+
+.BenefitsBlock{
+    min-width: 400px;
+    max-width: 400px;
+    height: 240px;
+    background: #1F1F1F;
+    border: 1px solid #595959;
+    border-radius: 5px;
+    margin: 13px;
+}
+.BenefitsBlock .title{
+    display: flex;
+    align-items: center;
+}
+.BenefitsBlock .title img{
+    margin: 15px;
+}
+.BenefitsBlock .title p{
+    color: white;
+    font-weight: 500;
+    font-size: 22px;
+    transition: all 0.5s ease;
+}
+.BenefitsBlock .text{
+    margin: 15px;
+    color: #C7C3C3;
+    font-weight: 400;
+    font-size: 16px;
+}
+.BenefitsSlider .btn-left{
+    display: none;
+}
+.BenefitsSlider .btn-right{
+    display: none;
+}
+
+
+
+/* Upward */
+.upward{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border-radius: 50%;
+    border: 2px solid #C7C3C3;
+    color: #C7C3C3;
+    box-shadow: 0px 0px 15px 0px rgba(199, 195, 195, 0.2);
+    transition: 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.upward.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+/* Немного адаптиции */
+
+
+@media (max-width: 1680px) { 
+    .container{
+        max-width: 1260px;
+    }
+    
+    .Navbar .NavbarContainer{
+        max-width: 1260px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 29px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 10px 30px 10px 30px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 20px;
+    }
+    
+    /* Content */
+    .content{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    /* About */
+    .content .ContentAbout{
+        max-width: 650px;
+    }
+    .content .ContentAbout .title{
+        padding: 50px 0 50px 0;
+        font-size: 38px;
+    }
+    .content .ContentAbout .text{
+        max-width: 550px;
+        font-size: 18px;
+        padding: 15px 0 15px 0;
+    }
+    .content .ContentAbout .btn p{
+        font-size: 26px;
+    }
+    
+    /* Logo */
+    .ContentImage{
+        scale: 0.99;
+    }
+    
+    
+    /* ScrollDown */
+    .Scroll .title p{
+        font-size: 20px;
+    }
+    .Scroll .icon{
+        font-size: 46px;
+    }
+    
+    /* Scanning */
+    .Scanning{
+        padding: 45px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 45px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 38px;
+    }
+    .Scanning .ScanningContent .text{
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .Scanning .ScanningImages .image{
+        scale: 0.95;
+        padding: 55px;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 25px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        margin: 150px 0 100px;
+    }
+    .Scanning .ScanningImages .image .btn:hover{
+        border: 2px solid #6b6b6b;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 24px;
+    }
+    
+    /* Benefits */
+    .Benefits{
+        padding: 40px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 40px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 38px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    
+    
+    .BenefitsBlock .title img{
+        margin: 15px;
+    }
+    .BenefitsBlock .title p{
+        font-size: 20px;
+    }
+    .BenefitsBlock .text{
+        margin: 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1600px) { 
+    .container{
+        max-width: 1260px;
+    }
+
+    .Navbar .NavbarContainer{
+        max-width: 1260px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 26px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 10px 25px 10px 25px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 18px;
+    }
+    
+    /* Content */
+    .content{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    /* About */
+    .content .ContentAbout{
+        max-width: 650px;
+    }
+    .content .ContentAbout .title{
+        padding: 50px 0 50px 0;
+        font-size: 36px;
+    }
+    .content .ContentAbout .text{
+        max-width: 600px;
+        font-size: 16px;
+        padding: 12px 0 12px 0;
+    }
+    .content .ContentAbout .btn p{
+        font-size: 26px;
+    }
+    
+    /* Logo */
+    .ContentImage{
+        scale: 0.98;
+    }
+    
+    
+    /* ScrollDown */
+    .Scroll .title p{
+        font-size: 18px;
+    }
+    .Scroll .icon{
+        font-size: 44px;
+    }
+    
+    /* Scanning */
+    .Scanning{
+        padding: 35px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 35px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 36px;
+    }
+    .Scanning .ScanningContent .text{
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .Scanning .ScanningImages .image{
+        scale: 0.9;
+        padding: 50px;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 18px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        margin: 140px 0 90px;
+    }
+    .Scanning .ScanningImages .image .btn:hover{
+        border: 2px solid #6b6b6b;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 22px;
+    }
+    
+    /* Benefits */
+    .Benefits{
+        padding: 40px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 40px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 36px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    
+    
+    .BenefitsBlock .title img{
+        margin: 15px;
+    }
+    .BenefitsBlock .title p{
+        font-size: 18px;
+    }
+    .BenefitsBlock .text{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1440px) { 
+    .container{
+        max-width: 1160px;
+    }
+
+    .Navbar .NavbarContainer{
+        max-width: 1160px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 24px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 10px 15px 10px 15px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 16px;
+    }
+    
+    /* Content */
+    .content{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    /* About */
+    .content .ContentAbout{
+        max-width: 560px;
+    }
+    .content .ContentAbout .title{
+        padding: 45px 0 45px 0;
+        font-size: 34px;
+    }
+    .content .ContentAbout .text{
+        max-width: 460px;
+        font-size: 14px;
+        padding: 15px 0 15px 0;
+    }
+    .content .ContentAbout .btn p{
+        font-size: 24px;
+    }
+    
+    /* Logo */
+    .ContentImage{
+        scale: 0.97;
+    }
+    
+    
+    /* ScrollDown */
+    .Scroll .title p{
+        font-size: 16px;
+    }
+    .Scroll .icon{
+        font-size: 42px;
+    }
+    
+    /* Scanning */
+    .Scanning{
+        padding: 25px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 25px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 34px;
+    }
+    .Scanning .ScanningContent .text{
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .Scanning .ScanningImages .image{
+        scale: 0.85;
+        padding: 65px;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 25px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        margin: 135px 0 85px;
+    }
+    .Scanning .ScanningImages .image .btn:hover{
+        border: 2px solid #6b6b6b;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 20px;
+    }
+    
+    /* Benefits */
+    .Benefits{
+        padding: 35px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 35px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 34px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    
+    
+    .BenefitsBlock .title img{
+        margin: 15px;
+    }
+    .BenefitsBlock .title p{
+        font-size: 16px;
+    }
+    .BenefitsBlock .text{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1366px) { 
+    .container{
+        max-width: 1060px;
+    }
+
+    .Navbar .NavbarContainer{
+        max-width: 1060px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 22px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 10px 20px 10px 20px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 14px;
+    }
+    
+    /* Content */
+    .content{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    /* About */
+    .content .ContentAbout{
+        max-width: 500px;
+    }
+    .content .ContentAbout .title{
+        padding: 40px 0 40px 0;
+        font-size: 32px;
+    }
+    .content .ContentAbout .text{
+        max-width: 400px;
+        font-size: 14px;
+        padding: 10px 0 10px 0;
+    }
+    .content .ContentAbout .btn p{
+        font-size: 22px;
+    }
+    
+    /* Logo */
+    .ContentImage{
+        scale: 0.96;
+    }
+    
+    
+    /* ScrollDown */
+    .Scroll .title p{
+        font-size: 14px;
+    }
+    .Scroll .icon{
+        font-size: 40px;
+    }
+    
+    /* Scanning */
+    .Scanning{
+        padding: 30px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 30px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 32px;
+    }
+    .Scanning .ScanningContent .text{
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    .Scanning .ScanningImages .image{
+        scale: 0.8;
+        padding: 40px;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 15px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        margin: 130px 0 80px;
+    }
+    .Scanning .ScanningImages .image .btn:hover{
+        border: 2px solid #6b6b6b;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 18px;
+    }
+    
+    /* Benefits */
+    .Benefits{
+        padding: 30px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 30px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 32px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    
+    
+    .BenefitsBlock .title img{
+        margin: 15px;
+    }
+    .BenefitsBlock .title p{
+        font-size: 16px;
+    }
+    .BenefitsBlock .text{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1260px) { 
+    .container{
+        max-width: 960px;
+    }
+
+    .Navbar .NavbarContainer{
+        max-width: 960px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 20px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 8px 18px 8px 18px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 14px;
+    }
+    
+    /* Content */
+    .content{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    /* About */
+    .content .ContentAbout{
+        max-width: 440px;
+    }
+    .content .ContentAbout .title{
+        padding: 35px 0 35px 0;
+        font-size: 30px;
+    }
+    .content .ContentAbout .text{
+        max-width: 350px;
+        font-size: 14px;
+        padding: 8px 0 8px 0;
+    }
+    .content .ContentAbout .btn p{
+        font-size: 20px;
+    }
+    
+    /* Logo */
+    .ContentImage{
+        scale: 0.95;
+    }
+    
+    
+    /* ScrollDown */
+    .Scroll .title p{
+        font-size: 14px;
+    }
+    .Scroll .icon{
+        font-size: 38px;
+    }
+    
+    /* Scanning */
+    .Scanning{
+        padding: 25px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 25px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 30px;
+    }
+    .Scanning .ScanningContent .text{
+        font-size: 14px;
+    }
+
+    .Scanning .ScanningImages .image{
+        scale: 0.8;
+        padding: 35px;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 10px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        margin: 130px 0 80px;
+    }
+    .Scanning .ScanningImages .image .btn:hover{
+        border: 2px solid #6b6b6b;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 16px;
+    }
+    
+    /* Benefits */
+    .Benefits{
+        padding: 25px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 25px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 30px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    
+    
+    .BenefitsBlock .title img{
+        margin: 10px;
+    }
+    .BenefitsBlock .title p{
+        font-size: 16px;
+    }
+    .BenefitsBlock .text{
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 1080px) { 
+    .container{
+        max-width: 860px;
+    }
+
+    .Navbar .NavbarContainer{
+        max-width: 860px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 18px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 6px 16px 6px 16px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 14px;
+    }
+    
+    /* Content */
+    .content{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    /* About */
+    .content .ContentAbout{
+        max-width: 400px;
+    }
+    .content .ContentAbout .title{
+        padding: 30px 0 30px 0;
+        font-size: 28px;
+    }
+    .content .ContentAbout .text{
+        max-width: 300px;
+        font-size: 14px;
+        padding: 6px 0 6px 0;
+    }
+    .content .ContentAbout .btn p{
+        font-size: 18px;
+    }
+    
+    /* Logo */
+    .ContentImage{
+        scale: 0.94;
+    }
+    
+    
+    /* ScrollDown */
+    .Scroll .title p{
+        font-size: 12px;
+    }
+    .Scroll .icon{
+        font-size: 36px;
+    }
+    
+    /* Scanning */
+    .Scanning{
+        padding: 20px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 20px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 28px;
+    }
+    .Scanning .ScanningContent .text{
+        font-size: 12px;
+        margin: 10px 0;
+    }
+
+    .Scanning .ScanningImages .image{
+        scale: 0.78;
+        padding: 30px;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 10px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        margin: 125px 0 75px;
+    }
+    .Scanning .ScanningImages .image .btn:hover{
+        border: 2px solid #6b6b6b;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 16px;
+    }
+    
+    /* Benefits */
+    .Benefits{
+        padding: 20px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 20px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 28px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 12px;
+        margin: 10px 0;
+    }
+    
+    
+    .BenefitsBlock .title img{
+        margin: 10px;
+    }
+    .BenefitsBlock .title p{
+        font-size: 14px;
+    }
+    .BenefitsBlock .text{
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 960px) { 
+    .container{
+        max-width: 780px;
+    }
+
+    .Navbar .NavbarContainer{
+        max-width: 780px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 16px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 6px 16px 6px 16px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 14px;
+    }
+    
+    /* Content */
+    .content{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    /* About */
+    .content .ContentAbout{
+        max-width: 320px;
+    }
+    .content .ContentAbout .title{
+        padding: 30px 0 30px 0;
+        font-size: 26px;
+    }
+    .content .ContentAbout .text{
+        max-width: 260px;
+        font-size: 14px;
+        padding: 6px 0 6px 0;
+    }
+    .content .ContentAbout .btn p{
+        font-size: 16px;
+    }
+    
+    /* Logo */
+    .ContentImage{
+        scale: 0.93;
+    }
+    
+    
+    /* ScrollDown */
+    .Scroll .title p{
+        font-size: 12px;
+    }
+    .Scroll .icon{
+        font-size: 34px;
+    }
+    
+    /* Scanning */
+    .Scanning{
+        padding: 20px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 20px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 26px;
+    }
+    .Scanning .ScanningContent .text{
+        font-size: 12px;
+        margin: 10px 0;
+    }
+
+    .Scanning .ScanningImages .image{
+        scale: 0.70;
+        padding: 10px;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 10px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        margin: 120px 0 70px;
+    }
+    .Scanning .ScanningImages .image .btn:hover{
+        border: 2px solid #6b6b6b;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 16px;
+    }
+    
+    /* Benefits */
+    .Benefits{
+        padding: 20px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 20px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 26px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 12px;
+        margin: 10px 0;
+    }
+    
+    
+    .BenefitsBlock .title img{
+        margin: 10px;
+    }
+    .BenefitsBlock .title p{
+        font-size: 14px;
+    }
+    .BenefitsBlock .text{
+        font-size: 12px;
+    }
+
+
+    .BenefitsContainer{
+        display: flex;
+        position: relative;
+    }
+    .BenefitsContainer .BenefitsSlider{
+        position: relative;
+        width: 402px;
+        height: 242px;
+        margin: 30px auto;
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+    .BenefitsContainer .BenefitsSlider .BenefitsList{
+        width: 1200px;
+        height: 240px;
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+        left: 0;
+        right: 0;
+        transition: all 0.5s ease;
+        justify-content: start;
+    }
+    .BenefitsContainer .BenefitsSlider .BenefitsList .BenefitsBlock{
+        margin: 0 10px 0 0;
+    }
+    .BenefitsContainer .btn-left{
+        font-size: 30px;
+        z-index: 10;
+        position: absolute;
+        top: calc(50% - 15px);
+        left: 120px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(121, 72, 255, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .BenefitsContainer .btn-left:hover{
+        color: rgba(121, 72, 255, 0.6);
+    }
+    
+    .BenefitsContainer .btn-right{
+        font-size: 30px;
+        z-index: 10;
+        position: absolute;
+        top: calc(50% - 15px);
+        right: 120px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(121, 72, 255, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .BenefitsContainer .btn-right:hover{
+        color: rgba(121, 72, 255, 0.6);
+    }
+}
+
+
+
+
+
+
+
+
+/* Телефон */
+
+@media (max-width: 860px) { 
+    .container{
+        max-width: 680px;
+    }
+
+    .Navbar .NavbarContainer{
+        max-width: 680px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 16px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 6px 16px 6px 16px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 14px;
+    }
+    
+    /* Content */
+    .content{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    /* About */
+    .content .ContentAbout{
+        max-width: 480px;
+        margin: 0 auto;
+    }
+    .content .ContentAbout .title{
+        padding: 30px 0 30px 0;
+        font-size: 26px;
+        text-align: center;
+    }
+    .content .ContentAbout .text{
+        max-width: 400px;
+        font-size: 14px;
+        padding: 6px 0 6px 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .content .ContentAbout .btn {
+        margin: 40px auto;
+    }
+    .content .ContentAbout .btn p{
+        font-size: 16px;
+    }
+    
+    /* Logo */
+    .ContentImage{
+        margin: 25px auto;
+        scale: 1;
+    }
+    
+    
+    /* ScrollDown */
+    .Scroll .title p{
+        font-size: 12px;
+    }
+    .Scroll .icon{
+        font-size: 34px;
+    }
+    
+    /* Scanning */
+    .Scanning{
+        padding: 15px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 15px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 24px;
+    }
+    .Scanning .ScanningContent .text{
+        font-size: 12px;
+        margin: 10px 0;
+    }
+
+    .Scanning .ScanningImages .image{
+        scale: 1;
+        padding: 40px;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 10px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        margin: 120px 0 70px;
+    }
+    .Scanning .ScanningImages .image .btn:hover{
+        border: 2px solid #6b6b6b;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 16px;
+    }
+
+    .Scanning .ScanningImages .image:nth-child(1){
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    .Scanning .ScanningImages .image:nth-child(3){
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    
+    /* Benefits */
+    .Benefits{
+        padding: 25px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 25px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 26px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    
+    
+    .BenefitsBlock .title img{
+        margin: 10px;
+    }
+    .BenefitsBlock .title p{
+        font-size: 14px;
+    }
+    .BenefitsBlock .text{
+        font-size: 12px;
+    }
+    
+    
+
+
+
+    .BenefitsList{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        transition: all 0.5s ease;
+    }
+    
+    .BenefitsBlock{
+        min-width: 400px;
+        height: 240px;
+        background: #1F1F1F;
+        border: 1px solid #595959;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .BenefitsBlock .title{
+        display: flex;
+        align-items: center;
+    }
+    .BenefitsBlock .title img{
+        margin: 15px;
+    }
+    .BenefitsBlock .title p{
+        color: white;
+        font-weight: 500;
+        font-size: 22px;
+        transition: all 0.5s ease;
+    }
+    .BenefitsBlock .text{
+        margin: 15px;
+        color: #C7C3C3;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+
+
+
+
+
+
+
+    .BenefitsContainer{
+        display: flex;
+        position: relative;
+    }
+    .BenefitsContainer .BenefitsSlider{
+        position: relative;
+        width: 402px;
+        height: 242px;
+        margin: 30px auto;
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+    .BenefitsContainer .BenefitsSlider .BenefitsList{
+        width: 1200px;
+        height: 240px;
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+        left: 0;
+        right: 0;
+        transition: all 0.5s ease;
+        justify-content: start;
+    }
+    .BenefitsContainer .BenefitsSlider .BenefitsList .BenefitsBlock{
+        margin: 0 10px 0 0;
+    }
+    .BenefitsContainer .btn-left{
+        font-size: 30px;
+        z-index: 10;
+        position: absolute;
+        top: calc(50% - 15px);
+        left: 50px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(121, 72, 255, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .BenefitsContainer .btn-left:hover{
+        color: rgba(121, 72, 255, 0.6);
+    }
+    
+    .BenefitsContainer .btn-right{
+        font-size: 30px;
+        z-index: 10;
+        position: absolute;
+        top: calc(50% - 15px);
+        right: 50px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(121, 72, 255, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .BenefitsContainer .btn-right:hover{
+        color: rgba(121, 72, 255, 0.6);
+    }
+}
+
+
+
+
+@media (max-width: 760px) { 
+    .container{
+        max-width: 580px;
+    }
+
+    .Navbar .NavbarContainer{
+        max-width: 580px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 16px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 6px 16px 6px 16px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 14px;
+    }
+    
+    /* Content */
+    .content{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    /* About */
+    .content .ContentAbout{
+        max-width: 480px;
+        margin: 0 auto;
+    }
+    .content .ContentAbout .title{
+        padding: 30px 0 30px 0;
+        font-size: 24px;
+        text-align: center;
+    }
+    .content .ContentAbout .text{
+        max-width: 400px;
+        font-size: 14px;
+        padding: 6px 0 6px 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .content .ContentAbout .btn {
+        margin: 40px auto;
+    }
+    .content .ContentAbout .btn p{
+        font-size: 16px;
+    }
+    
+    /* Logo */
+    .ContentImage{
+        margin: 25px auto;
+        scale: 0.95;
+    }
+    
+    
+    /* ScrollDown */
+    .Scroll .title p{
+        font-size: 12px;
+    }
+    .Scroll .icon{
+        font-size: 32px;
+    }
+    
+    /* Scanning */
+    .Scanning{
+        padding: 15px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 15px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 22px;
+    }
+    .Scanning .ScanningContent .text{
+        font-size: 12px;
+        margin: 10px 0;
+    }
+
+    .Scanning .ScanningImages .image{
+        scale: 0.95;
+        padding: 40px;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 10px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        margin: 120px 0 70px;
+    }
+    .Scanning .ScanningImages .image .btn:hover{
+        border: 2px solid #6b6b6b;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 16px;
+    }
+
+    .Scanning .ScanningImages .image:nth-child(1){
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    .Scanning .ScanningImages .image:nth-child(3){
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    
+    /* Benefits */
+    .Benefits{
+        padding: 25px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 25px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 24px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    
+    
+    .BenefitsBlock .title img{
+        margin: 10px;
+    }
+    .BenefitsBlock .title p{
+        font-size: 14px;
+    }
+    .BenefitsBlock .text{
+        font-size: 12px;
+    }
+    
+
+
+    .BenefitsList{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        transition: all 0.5s ease;
+    }
+    
+    .BenefitsBlock{
+        min-width: 400px;
+        height: 240px;
+        background: #1F1F1F;
+        border: 1px solid #595959;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .BenefitsBlock .title{
+        display: flex;
+        align-items: center;
+    }
+    .BenefitsBlock .title img{
+        margin: 15px;
+    }
+    .BenefitsBlock .title p{
+        color: white;
+        font-weight: 500;
+        font-size: 22px;
+        transition: all 0.5s ease;
+    }
+    .BenefitsBlock .text{
+        margin: 15px;
+        color: #C7C3C3;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+
+
+
+
+    .BenefitsContainer{
+        display: flex;
+        position: relative;
+    }
+    .BenefitsContainer .BenefitsSlider{
+        position: relative;
+        width: 402px;
+        height: 242px;
+        margin: 30px auto;
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+    .BenefitsContainer .BenefitsSlider .BenefitsList{
+        width: 1200px;
+        height: 240px;
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+        left: 0;
+        right: 0;
+        transition: all 0.5s ease;
+        justify-content: start;
+    }
+    .BenefitsContainer .BenefitsSlider .BenefitsList .BenefitsBlock{
+        margin: 0 10px 0 0;
+    }
+    .BenefitsContainer .btn-left{
+        font-size: 30px;
+        z-index: 10;
+        position: absolute;
+        top: calc(50% - 15px);
+        left: 20px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(121, 72, 255, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .BenefitsContainer .btn-left:hover{
+        color: rgba(121, 72, 255, 0.6);
+    }
+    
+    .BenefitsContainer .btn-right{
+        font-size: 30px;
+        z-index: 10;
+        position: absolute;
+        top: calc(50% - 15px);
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(121, 72, 255, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .BenefitsContainer .btn-right:hover{
+        color: rgba(121, 72, 255, 0.6);
+    }
+}
+@media (max-width: 600px) { 
+    .container{
+        max-width: 525px;
+    }
+
+    .Navbar .NavbarContainer{
+        max-width: 525px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 12px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 4px 12px 4px 12px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 14px;
+    }
+    
+    /* Content */
+    .content{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    /* About */
+    .content .ContentAbout{
+        max-width: 460px;
+        margin: 0 auto;
+    }
+    .content .ContentAbout .title{
+        padding: 30px 0 30px 0;
+        font-size: 22px;
+        text-align: center;
+    }
+    .content .ContentAbout .text{
+        max-width: 400px;
+        font-size: 14px;
+        padding: 6px 0 6px 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .content .ContentAbout .btn {
+        margin: 30px auto;
+    }
+    .content .ContentAbout .btn p{
+        font-size: 14px;
+    }
+    
+    /* Logo */
+    .ContentImage{
+        margin: 20px auto;
+        scale: 0.85;
+    }
+    
+    
+    /* ScrollDown */
+    .Scroll .title p{
+        font-size: 12px;
+    }
+    .Scroll .icon{
+        font-size: 30px;
+    }
+    
+    /* Scanning */
+    .Scanning{
+        padding: 15px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 15px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 20px;
+    }
+    .Scanning .ScanningContent .text{
+        font-size: 12px;
+        margin: 10px 0;
+    }
+
+    .Scanning .ScanningImages .image{
+        scale: 0.85;
+        padding: 30px;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 10px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        margin: 120px 0 70px;
+    }
+    .Scanning .ScanningImages .image .btn:hover{
+        border: 2px solid #6b6b6b;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 14px;
+    }
+
+    .Scanning .ScanningImages .image:nth-child(1){
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    .Scanning .ScanningImages .image:nth-child(3){
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    
+    /* Benefits */
+    .Benefits{
+        padding: 20px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 20px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 24px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    
+    
+    .BenefitsBlock .title img{
+        margin: 10px;
+    }
+    .BenefitsBlock .title p{
+        font-size: 14px;
+    }
+    .BenefitsBlock .text{
+        font-size: 12px;
+    }
+    
+
+
+    .BenefitsList{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        transition: all 0.5s ease;
+    }
+    
+    .BenefitsBlock{
+        min-width: 400px;
+        height: 240px;
+        background: #1F1F1F;
+        border: 1px solid #595959;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .BenefitsBlock .title{
+        display: flex;
+        align-items: center;
+    }
+    .BenefitsBlock .title img{
+        margin: 15px;
+        scale: 0.9;
+    }
+    .BenefitsBlock .title p{
+        color: white;
+        font-weight: 500;
+        font-size: 20px;
+        transition: all 0.5s ease;
+    }
+    .BenefitsBlock .text{
+        margin: 15px;
+        color: #C7C3C3;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+
+
+
+
+    .BenefitsContainer{
+        display: flex;
+        position: relative;
+    }
+    .BenefitsContainer .BenefitsSlider{
+        position: relative;
+        width: 402px;
+        height: 242px;
+        margin: 30px auto;
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+    .BenefitsContainer .BenefitsSlider .BenefitsList{
+        width: 1200px;
+        height: 240px;
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+        left: 0;
+        right: 0;
+        transition: all 0.5s ease;
+        justify-content: start;
+    }
+    .BenefitsContainer .BenefitsSlider .BenefitsList .BenefitsBlock{
+        margin: 0 10px 0 0;
+    }
+    .BenefitsContainer .btn-left{
+        font-size: 30px;
+        z-index: 10;
+        position: absolute;
+        top: calc(50% - 15px);
+        left: 15px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(121, 72, 255, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .BenefitsContainer .btn-left:hover{
+        color: rgba(121, 72, 255, 0.6);
+    }
+    
+    .BenefitsContainer .btn-right{
+        font-size: 30px;
+        z-index: 10;
+        position: absolute;
+        top: calc(50% - 15px);
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(121, 72, 255, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .BenefitsContainer .btn-right:hover{
+        color: rgba(121, 72, 255, 0.6);
+    }
+}
+
+
+@media (max-width: 500px) { 
+    .container{
+        max-width: 425px;
+    }
+
+    .Navbar .NavbarContainer{
+        max-width: 425px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 12px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 4px 12px 4px 12px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 14px;
+    }
+    
+    /* Content */
+    .content{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    /* About */
+    .content .ContentAbout{
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .content .ContentAbout .title{
+        padding: 30px 0 30px 0;
+        font-size: 20px;
+        text-align: center;
+    }
+    .content .ContentAbout .text{
+        max-width: 300px;
+        font-size: 12px;
+        padding: 6px 0 6px 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .content .ContentAbout .btn {
+        margin: 30px auto;
+    }
+    .content .ContentAbout .btn p{
+        font-size: 14px;
+    }
+    
+    /* Logo */
+    .ContentImage{
+        margin: 20px auto;
+        scale: 0.85;
+    }
+    
+    
+    /* ScrollDown */
+    .Scroll{
+        margin: 40px auto;
+    }
+    .Scroll .title p{
+        font-size: 12px;
+    }
+    .Scroll .icon{
+        font-size: 30px;
+    }
+    
+    /* Scanning */
+    .Scanning{
+        padding: 15px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 15px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 20px;
+    }
+    .Scanning .ScanningContent .text{
+        font-size: 12px;
+        margin: 10px 0;
+    }
+
+    .Scanning .ScanningImages .image{
+        scale: 0.85;
+        padding: 30px;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 10px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        margin: 60px 0 30px;
+    }
+    .Scanning .ScanningImages .image .btn:hover{
+        border: 2px solid #6b6b6b;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 14px;
+    }
+
+    .Scanning .ScanningImages .image:nth-child(1){
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    .Scanning .ScanningImages .image:nth-child(3){
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    
+    /* Benefits */
+    .Benefits{
+        padding: 20px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 20px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 20px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    
+    
+    .BenefitsBlock .title img{
+        margin: 10px;
+    }
+    .BenefitsBlock .title p{
+        font-size: 14px;
+    }
+    .BenefitsBlock .text{
+        font-size: 12px;
+    }
+    
+
+
+    .BenefitsList{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        transition: all 0.5s ease;
+    }
+    
+    .BenefitsBlock{
+        min-width: 400px;
+        height: 240px;
+        background: #1F1F1F;
+        border: 1px solid #595959;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .BenefitsBlock .title{
+        display: flex;
+        align-items: center;
+    }
+    .BenefitsBlock .title img{
+        margin: 15px;
+        scale: 0.8;
+    }
+    .BenefitsBlock .title p{
+        color: white;
+        font-weight: 500;
+        font-size: 18px;
+        transition: all 0.5s ease;
+    }
+    .BenefitsBlock .text{
+        margin: 15px;
+        color: #C7C3C3;
+        font-weight: 400;
+        font-size: 13px;
+    }
+
+
+
+
+
+    .BenefitsContainer{
+        display: flex;
+        position: relative;
+    }
+    .BenefitsContainer .BenefitsSlider{
+        position: relative;
+        width: 402px;
+        height: 242px;
+        margin: 30px auto;
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+    .BenefitsContainer .BenefitsSlider .BenefitsList{
+        width: 1200px;
+        height: 240px;
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+        left: 0;
+        right: 0;
+        transition: all 0.5s ease;
+        justify-content: start;
+    }
+    .BenefitsContainer .BenefitsSlider .BenefitsList .BenefitsBlock{
+        margin: 0 10px 0 0;
+    }
+    .BenefitsContainer .btn-left{
+        font-size: 30px;
+        z-index: 10;
+        position: absolute;
+        top: calc(50% - 15px);
+        left: 15px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(121, 72, 255, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .BenefitsContainer .btn-left:hover{
+        color: rgba(121, 72, 255, 0.6);
+    }
+    
+    .BenefitsContainer .btn-right{
+        font-size: 30px;
+        z-index: 10;
+        position: absolute;
+        top: calc(50% - 15px);
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(121, 72, 255, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .BenefitsContainer .btn-right:hover{
+        color: rgba(121, 72, 255, 0.6);
+    }
+}
+
+
+
+
+@media (max-width: 550px) { 
+    .container{
+        max-width: 420px;
+    }
+
+    .Navbar .NavbarContainer{
+        max-width: 420px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 12px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 4px 12px 4px 12px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 14px;
+    }
+    
+    /* Content */
+    .content{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    /* About */
+    .content .ContentAbout{
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    .content .ContentAbout .title{
+        padding: 30px 0 30px 0;
+        font-size: 18px;
+        text-align: center;
+    }
+    .content .ContentAbout .text{
+        max-width: 300px;
+        font-size: 12px;
+        padding: 6px 0 6px 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .content .ContentAbout .btn {
+        margin: 30px auto;
+    }
+    .content .ContentAbout .btn p{
+        font-size: 12px;
+    }
+    
+    /* Logo */
+    .ContentImage{
+        margin: 20px auto;
+        scale: 0.75;
+    }
+    
+    
+    /* ScrollDown */
+    .Scroll{
+        margin: 35px auto;
+    }
+    .Scroll .title p{
+        font-size: 12px;
+    }
+    .Scroll .icon{
+        font-size: 28px;
+    }
+    
+    /* Scanning */
+    .Scanning{
+        padding: 15px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 15px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 18px;
+    }
+    .Scanning .ScanningContent .text{
+        font-size: 12px;
+        margin: 10px 0;
+    }
+
+    .Scanning .ScanningImages .image{
+        scale: 0.75;
+        padding: 30px;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 10px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        margin: 40px 0 20px;
+    }
+    .Scanning .ScanningImages .image .btn:hover{
+        border: 2px solid #6b6b6b;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 14px;
+    }
+
+    .Scanning .ScanningImages .image:nth-child(1){
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    .Scanning .ScanningImages .image:nth-child(3){
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    
+    /* Benefits */
+    .Benefits{
+        padding: 20px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 20px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 18px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 12px;
+        margin: 10px 0;
+    }
+    
+    
+    .BenefitsBlock .title img{
+        margin: 10px;
+        scale: 0.75;
+    }
+    .BenefitsBlock .title p{
+        font-size: 12px;
+    }
+    .BenefitsBlock .text{
+        font-size: 12px;
+    }
+    
+
+
+    .BenefitsList{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        transition: all 0.5s ease;
+    }
+    
+    .BenefitsBlock{
+        min-width: 300px;
+        height: 200px;
+        background: #1F1F1F;
+        border: 1px solid #595959;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .BenefitsBlock .title{
+        display: flex;
+        align-items: center;
+    }
+    .BenefitsBlock .title img{
+        margin: 15px;
+    }
+    .BenefitsBlock .title p{
+        color: white;
+        font-weight: 500;
+        font-size: 16px;
+        transition: all 0.5s ease;
+    }
+    .BenefitsBlock .text{
+        margin: 15px;
+        color: #C7C3C3;
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+
+
+
+
+    .BenefitsContainer{
+        display: flex;
+        position: relative;
+    }
+    .BenefitsContainer .BenefitsSlider{
+        position: relative;
+        width: 302px;
+        height: 202px;
+        margin: 30px auto;
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+    .BenefitsContainer .BenefitsSlider .BenefitsList{
+        width: 1812px;
+        height: 202px;
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+        left: 0;
+        right: 0;
+        transition: all 0.5s ease;
+        justify-content: start;
+    }
+    .BenefitsContainer .BenefitsSlider .BenefitsList .BenefitsBlock{
+        margin: 0 10px 0 0;
+    }
+    .BenefitsContainer .btn-left{
+        font-size: 30px;
+        z-index: 10;
+        position: absolute;
+        top: calc(50% - 15px);
+        left: 15px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(121, 72, 255, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .BenefitsContainer .btn-left:hover{
+        color: rgba(121, 72, 255, 0.6);
+    }
+    
+    .BenefitsContainer .btn-right{
+        font-size: 30px;
+        z-index: 10;
+        position: absolute;
+        top: calc(50% - 15px);
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(121, 72, 255, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .BenefitsContainer .btn-right:hover{
+        color: rgba(121, 72, 255, 0.6);
+    }
+}
+
+@media (max-width: 450px) { 
+    .container{
+        max-width: 360px;
+    }
+
+    .Navbar .NavbarContainer{
+        max-width: 360px;
+    }
+    .Navbar .NavbarContainer .NavbarLogo h1{
+        font-size: 12px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks a{
+        margin: 4px 12px 4px 12px;
+    }
+    .Navbar .NavbarContainer .NavbarLinks .NavbarLink{
+        font-size: 14px;
+    }
+    
+    /* Content */
+    .content{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    /* About */
+    .content .ContentAbout{
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    .content .ContentAbout .title{
+        padding: 20px 0 20px 0;
+        font-size: 16px;
+        text-align: center;
+    }
+    .content .ContentAbout .text{
+        max-width: 280px;
+        font-size: 10px;
+        padding: 6px 0 6px 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .content .ContentAbout .btn {
+        margin: 30px auto;
+    }
+    .content .ContentAbout .btn p{
+        font-size: 10px;
+    }
+    
+    /* Logo */
+    .ContentImage{
+        margin: 10px auto;
+        scale: 0.6;
+    }
+    
+    
+    /* ScrollDown */
+    .Scroll{margin: 30px 0;}
+    .Scroll .title p{
+        font-size: 10px;
+    }
+    .Scroll .icon{
+        font-size: 26px;
+    }
+    
+    /* Scanning */
+    .Scanning{
+        padding: 15px 0;
+    }
+    .Scanning .ScanningContent{
+        padding: 15px 0;
+    }
+    .Scanning .ScanningContent .title{
+        font-size: 16px;
+    }
+    .Scanning .ScanningContent .text{
+        font-size: 10px;
+        margin: 10px 0;
+    }
+
+    .Scanning .ScanningImages .image{
+        scale: 0.6;
+        padding: 30px;
+    }
+    .Scanning .ScanningImages .image img{
+        padding: 10px;
+    }
+    .Scanning .ScanningImages .image .btn{
+        margin: 30px 0 10px;
+    }
+    .Scanning .ScanningImages .image .btn:hover{
+        border: 2px solid #6b6b6b;
+    }
+    .Scanning .ScanningImages .image .btn p{
+        font-size: 14px;
+    }
+
+    .Scanning .ScanningImages .image:nth-child(1){
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    .Scanning .ScanningImages .image:nth-child(3){
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+    
+    /* Benefits */
+    .Benefits{
+        padding: 15px 0;
+    }
+    .Benefits .BenefitsContent{
+        padding: 15px 0;
+    }
+    .Benefits .BenefitsContent .title{
+        font-size: 16px;
+    }
+    .Benefits .BenefitsContent .text{
+        font-size: 10px;
+        margin: 10px 0;
+    }
+    
+    
+    .BenefitsBlock .title img{
+        margin: 10px;
+        scale: 0.75;
+    }
+    .BenefitsBlock .title p{
+        font-size: 10px;
+    }
+    .BenefitsBlock .text{
+        font-size: 10px;
+    }
+    
+
+
+    .BenefitsList{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        transition: all 0.5s ease;
+    }
+    
+    .BenefitsBlock{
+        min-width: 300px;
+        height: 200px;
+        background: #1F1F1F;
+        border: 1px solid #595959;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .BenefitsBlock .title{
+        display: flex;
+        align-items: center;
+    }
+    .BenefitsBlock .title img{
+        margin: 15px;
+        scale: 0.7;
+    }
+    .BenefitsBlock .title p{
+        color: white;
+        font-weight: 500;
+        font-size: 16px;
+        transition: all 0.5s ease;
+    }
+    .BenefitsBlock .text{
+        margin: 15px;
+        color: #C7C3C3;
+        font-weight: 400;
+        font-size: 11px;
+    }
+
+
+
+
+
+    .BenefitsContainer{
+        display: flex;
+        position: relative;
+    }
+    .BenefitsContainer .BenefitsSlider{
+        position: relative;
+        width: 302px;
+        height: 202px;
+        margin: 30px auto;
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+    .BenefitsContainer .BenefitsSlider .BenefitsList{
+        width: 1812px;
+        height: 202px;
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+        left: 0;
+        right: 0;
+        transition: all 0.5s ease;
+        justify-content: start;
+    }
+    .BenefitsContainer .BenefitsSlider .BenefitsList .BenefitsBlock{
+        margin: 0 10px 0 0;
+    }
+    .BenefitsContainer .btn-left{
+        font-size: 30px;
+        z-index: 10;
+        position: absolute;
+        top: calc(50% - 15px);
+        left: 0px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(121, 72, 255, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .BenefitsContainer .btn-left:hover{
+        color: rgba(121, 72, 255, 0.6);
+    }
+    
+    .BenefitsContainer .btn-right{
+        font-size: 30px;
+        z-index: 10;
+        position: absolute;
+        top: calc(50% - 15px);
+        right: 0px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(121, 72, 255, 0.4);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .BenefitsContainer .btn-right:hover{
+        color: rgba(121, 72, 255, 0.6);
+    }
+    .upward{
+        display: none;
+    }
+}

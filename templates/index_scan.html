@@ -1,0 +1,34 @@
+<section class="section">
+            <div class="container">
+                <div class="Scanning">
+                    <div class="ScanningContent">
+                        <div class="title">
+                            <h1>СКАНИРУЙТЕ ФАЙЛЫ ПРЯМО НА САЙТЕ</h1>
+                        </div>
+                        <div class="text">
+                            <p>Анализируйте файлы прямо на нашем сайте.</p>
+                            <p>Для этого не требуется скачивание нашего приложения.</p>
+                        </div>
+                    </div>
+                    <div class="ScanningImages">
+                        <div class="image">
+                            <img src="{{ url_for('static', filename='/images/LeftImage.png') }}">
+                        </div>
+                        <div class="image">
+                            <img src="{{ url_for('static', filename='/images/CenterImage.png') }}">
+                            <a>
+                                <form enctype=multipart/form-data method=POST action="{{ url_for('upload') }}">
+                                    <div class="btn" >
+                                        <input type=file name=file onchange="form.submit()">
+                                        <p>Scan File</p>
+                                    </div>
+                                </form>
+                            </a>
+                        </div>
+                        <div class="image">
+                            <img src="{{ url_for('static', filename='/images/RightImage.png') }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
