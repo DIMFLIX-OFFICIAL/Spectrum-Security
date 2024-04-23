@@ -18,6 +18,5 @@ In the future, the project will be updated, getting better and better.
 
 
 ## Developers
-
 - [DIMFLIX](https://github.com/DIMFLIX-OFFICIAL)
 
